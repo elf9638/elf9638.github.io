@@ -4,4 +4,35 @@
 @import 'layout';
 @import 'common';
 
+/* main */
+
+.workingCalc{margin:30px -25px 0;padding:30px 18px 25px 40%;background:url(../images/bg_workingMain.jpg) no-repeat 0 0 / cover;
+	h3{margin-bottom:10px;color:$col_gr200;font-size:rem(15px);font-weight:$weight700}
+	.inner{display:flex;justify-content:space-between;margin-left:-7px;
+		.selectWrap{width:100%;margin-left:7px}
+	}
+	button{width:100%;height:32px;margin-top:13px;color:$col_white;font-size:rem(13px);border-radius:5px;background:$col_point2}	
+}
+
+.loginAfterArea{text-align:center;
+	p{padding-top:27px;font-size:rem(10px);color:$col_point1;text-align:center;}
+	.btnArea{height:42px;margin-top:20px;padding:0 38px;text-align:center;
+		.btnL{display:inline-block;width:calc(50% - 12px);margin:0 5px;height:42px;line-height:42px}
+	}
+	.listAfter{display:inline-block;margin:28px auto 0;
+		> li{display:inline-block;margin:0 -2px;
+			> a{display:block;width:61px;padding-top:57px;color:$col_black;font-size:rem(10px);background:url(../images/bg_loginEtc01.png) no-repeat 50% 0 / 50px auto}
+			&.etc02 > a{background-image:url(../images/bg_loginEtc02.png)}
+			&.etc03 > a{background-image:url(../images/bg_loginEtc03.png)}
+			&.etc04 > a{background-image:url(../images/bg_loginEtc04.png)}
+			&.etc05 > a{background-image:url(../images/bg_loginEtc05.png)}
+		}
+	}
+	.courseNearby{position:relative;display:block;height:94px;margin-top:38px;padding:14px 18px;background:$col_b200;border-radius:10px;text-align:left;
+		&:after{content:'';display:block;position:absolute;bottom:12px;left:20px;width:32px;height:32px;background:url(../images/bg_nearby.png) no-repeat 0 0 / cover}
+		strong{display:block;color:$col_white;font-size:rem(13px);font-weight:$weight700}
+		span{position:absolute;bottom:14px;right:20px;color:$col_white;font-size:rem(13px);font-weight:$weight700}
+	}
+}
+
 

@@ -5,40 +5,24 @@
 	//color
 	$default_col:#606060; 
 	
-	$col_g100:#F8F8F8;
-	$col_g200:#EAEAEA;
-	$col_g300:#DADADA;
-	$col_g400:#CACACA;
-	$col_g500:#AEAEAE;
-	$col_g600:#808080;
-	$col_g800:#404040;
-	$col_g900:#1a1a1a;
-
-	$col_p100:#fff5f5; 
-	$col_p200:#fbe1e1; 
-	$col_p300:#f4c8c8; 
-	$col_p400:#f4a7a7; 
-	$col_p500:#f58383; 
-	$col_p600:#ee5e5e; 
-	$col_p800:#d03737; 
-	$col_p900:#9d0000; 
 	
-	$col_r100:#FEF6F8;
-	$col_r200:#FCE8EE;
-	$col_r300:#FAD1DD;
-	$col_r400:#F4A4BB;
-	$col_r500:#F28DA9;
-	$col_r600:#EC5F87;
-	$col_r800:#DE1A50;
-	$col_r900:#C90B40;
-	$col_redP:#E83667;
+	$col_g100:#F6F6F4;
+	$col_g200:#7D7D7D;
+	$col_g300:#D8D8D8;
+	$col_g400:#cecece;
+	$col_g500:#666;
+	
+	$col_gr100:#2AC79B;
+	$col_gr200:#194643;
+	$col_b100:#000873;
+	$col_b200:#6CBEEB;
 
 	$col_white:#fff;
 	$col_black:#000;
-	$col_point1:#001b3a;
-	$col_point2:#E83667;
-	$col_primary:#001b3a;
+	$col_point1:#2CA8EC;
+	$col_point2:#C35252;
 
+	$col_b05:rgba($col_black, 0.05);
 	$col_b07:rgba($col_black, 0.07);
 	$col_b40:rgba($col_black, 0.4);
 	$col_b50:rgba($col_black, 0.5);

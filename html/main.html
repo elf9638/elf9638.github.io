@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>강릉바우길</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link href="../css/content.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<p class="skip"><a href="#container">본문 바로가기</a></p>
+	<section id="wrapper" class="wrapper">
+		<header>
+			<h1 class="titMain"><a href="#">강릉바우길</a></h1>
+			<div class="topUtil">
+				<button type="button" class="btSos">SOS</button>
+				<button type="button" class="btSearch">검색</button>
+			</div>
+		</header>
+	
+		<div id="container" class="container">
+			<!-- start of contents -->
+			<h2 class="titDep-02">강릉 걷는 길</h2>
+			<div class="swiper swiperRight swiperMain01">
+				<ul class="swiper-wrapper">
+				  	<li class="swiper-slide">
+						<a href="#" role="button">
+							<figure><img src="../images/dummy/@photo1.jpg" alt=""></figure>
+							<span>바우길 일반 구간 (1-17) 바우길 일반 구간 (1-17)</span>
+						</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="#" role="button">
+							<figure><img src="../images/dummy/@photo2.jpg" alt=""></figure>
+							<span>올림픽 아리바우길</span>
+						</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="#" role="button">
+							<figure><img src="../images/dummy/@photo1.jpg" alt=""></figure>
+							<span>바우길 일반 구간 (1-17)</span>
+						</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="#" role="button">
+							<figure><img src="../images/dummy/@photo1.jpg" alt=""></figure>
+							<span>바우길 일반 구간 (1-17)</span>
+						</a>
+					</li>
+					<li class="swiper-slide">
+						<a href="#" role="button">
+							<figure><img src="../images/dummy/@photo2.jpg" alt=""></figure>
+							<span>올림픽 아리바우길</span>
+						</a>
+					</li>
+				</ul>
+				<div class="swiper-pagination"></div>
+			</div>
+
+			<div class="workingCalc">
+				<h3>걷는 길 시작</h3>
+				<div class="inner">
+					<div class="selectWrap">
+						<select>
+							<option>길</option>
+						</select>
+					</div>
+					<br>
+					<div class="selectWrap">
+						<select>
+							<option>구간</option>
+						</select>
+					</div>
+				</div>
+				<button type="button">걷기시작</button>
+				
+			</div>
+
+			<!-- 로그인 전 -->
+			<div class="loginAfterArea">
+				<p>로그인 하시면 <br>더 다양한 정보를 얻을 수 있어요</p>
+				<div class="btnArea">
+					<a href="#" role="button" class="btnDefault btnL btGreen">회원가입</a>
+					<a href="#" role="button" class="btnDefault btnL btBlue">로그인</a>
+				</div>
+				<ul class="listAfter">
+					<li class="etc01"><a href="#" role="button">인기구간</a></li>
+					<li class="etc02"><a href="#" role="button">준비물</a></li>
+					<li class="etc03"><a href="#" role="button">걷기TIP</a></li>
+					<li class="etc04"><a href="#" role="button">안전가이드</a></li>
+					<li class="etc05"><a href="#" role="button">공지/이벤트</a></li>
+				</ul>
+				<a href="#" class="courseNearby">
+					<strong>근처 코스</strong>
+					<span>올림픽 아리 바우길 2코스</span>
+				</a>
+			</div>
+
+			
+
+			<!-- // end of contents -->
+		</div><!-- //container -->
+	
+	
+	</section>
+	<footer>
+		<p>강릉 걷는 길 안내소</p>
+		<p>전화번호 : 033)647-0991</p>
+		<p>주소 : 강릉시 성산면 삼포암길 17</p>
+	</footer>
+
+	<nav id="navi">
+		<div class="inner">
+			<a href="#" class="btHome">홈</a>
+			<a href="#" class="btWorking">걷는 길</a>
+			<a href="#" class="btStamp">스탬프</a>
+			<a href="#" class="btMy">마이페이지</a>
+			<a href="#" class="btMenu">메뉴</a>
+		</div>
+	</nav>
+	
+</body>
+
+
+<script src="../js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+	var swiper = new Swiper(".swiperMain01", {
+		slidesPerView: 2,
+		spaceBetween: 13,
+		pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+		},
+	});
+</script>
+
+</html>
+
