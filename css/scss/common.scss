@@ -65,7 +65,9 @@ textarea::placeholder{font-size:rem(13px)}
 
 /* title */
 .titDep{
-	&-02{margin-bottom:10px;color:$col_black;font-size:rem(15px);font-weight:$weight700;}
+	&-02{margin:33px 0 10px 0;color:$col_black;font-size:rem(15px);font-weight:$weight700;
+		&.titTop{margin-top:0}
+	}
 }
 
 /* button */
@@ -92,7 +94,9 @@ textarea::placeholder{font-size:rem(13px)}
 	&.swiperMain01{
 		.swiper-slide{
 			a{
-				figure{overflow:hidden;border-radius:10px}
+				figure{position:relative;overflow:hidden;border-radius:10px;height:198px;
+					img{position:absolute;top:0;left:50%;width:auto;height:100%;@include prefix(transform,translateX(-50%));}
+				}
 				span{display:block;margin-top:10px;color:$col_black}
 			}
 		}
@@ -100,7 +104,35 @@ textarea::placeholder{font-size:rem(13px)}
 }
 
 /* form */
+input[type=text],input[type=password], input[type=search], input[type=number], input[type=tel]{width:100%;height:45px;padding:0 14px;line-height:43px;border:1px solid $col_g600;border-radius:3px;background:$col_white;
+	&::-webkit-search-decoration,
+  	&::-webkit-search-cancel-button,
+  	&::-webkit-search-results-button,
+  	&::-webkit-search-results-decoration{
+    	display: none;
+  	}
+}
 .selectWrap{position:relative;
 	select{width:100%;height:32px;padding:0 10px;color:$col_g500;font-size:rem(12px);border-radius:5px;border:none;appearance:none;}
 	&::after{content:'';display:block;position:absolute;top:50%;right:10px;width:5px;height:5px;margin-top:-3px;border:solid $col_black;border-width:0 1px 1px 0;@include prefix(transform,rotate(45deg));}
+}
+.searchWrap{position:relative;
+	input{padding-right:45px}
+	button{@extend %textHidden;position:absolute;top:0;right:0;width:45px;height:45px;
+		&:after{@include pseudo(25px,25px);background:url(../images/common/ico_search01.svg) no-repeat 0 0 / 25px auto}
+	}
+}
+
+/* tab */
+.tabArea{height:46px;margin:0 -23px;padding:0 3px;
+	.tabType01{display:flex;width:100%;
+		> li{width:100%;
+			> a{position:relative;display:block;height:46px;line-height:46px;text-align:center;
+				span{position:relative;display:inline-block;color:$col_black;font-weight:$weight500;font-size:rem(15px);line-height:46px;
+					&:after{content:'';display:block;position:absolute;bottom:0;width:100%;height:5px;border-radius:5px;background:$col_white;}
+				}
+			}
+			&.tabON > a span:after{background:$col_point1}
+		}
+	}
 }

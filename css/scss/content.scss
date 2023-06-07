@@ -5,7 +5,6 @@
 @import 'common';
 
 /* main */
-
 .workingCalc{margin:30px -25px 0;padding:30px 18px 25px 40%;background:url(../images/bg_workingMain.jpg) no-repeat 0 0 / cover;
 	h3{margin-bottom:10px;color:$col_gr200;font-size:rem(15px);font-weight:$weight700}
 	.inner{display:flex;justify-content:space-between;margin-left:-7px;
@@ -37,4 +36,26 @@
 	}
 }
 
-
+.sightsList{margin:10px -23px 0;
+	> ul{
+		> li{position:relative;margin-top:21px;
+			a{position:relative;display:block;padding:0 25px;z-index:10;overflow:hidden;
+				&:after{content:'';display:block;clear:both}
+				figure{float:left;position:relative;overflow:hidden;width:117px;border-radius:7px;height:90px;
+					img{position:absolute;top:50%;left:0;@include prefix(transform,translateY(-50%));}
+				}
+				.sightsInfo{float:left;width:calc(100% - 117px);padding-left:13px;
+					.flag{display:block;padding-right:25px;color:$col_g200}
+					.tit{@include ellipsis(1, auto);display:block;margin-top:6px;color:$col_black;font-size:rem(14px);font-weight:$weight500}
+					.cont{@include ellipsis(2, auto);margin-top:7px;color:$col_g200}
+				}
+			}
+			.frmFavo{position:absolute;top:0;right:25px;width:22px;height:22px;z-index:100;
+				input{@extend %hidden;
+					&:checked + label{background-position:-23px 0}
+				}
+				label{@extend %textHidden;display:block;width:22px;height:22px;background:url(../images/common/spr_icon.svg) no-repeat 0 0 / 250px auto}
+			}
+		}
+	}
+}

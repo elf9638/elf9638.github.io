@@ -1,4 +1,4 @@
-.hidden {
+.hidden, .sightsList > ul > li .frmFavo input {
   overflow: hidden;
   position: absolute;
   width: 1px;
@@ -6,7 +6,7 @@
   margin: -1px !important;
   clip: rect(0 0 0 0); }
 
-#wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, nav .inner a {
+#wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, nav .inner a, .searchWrap button, .sightsList > ul > li .frmFavo label {
   overflow: hidden;
   text-indent: -9999px; }
 
@@ -71,10 +71,14 @@ body > #wrapper {
   z-index: 10;
   background: #F6F6F4; }
   #wrapper header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 67px;
     background: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07); }
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    z-index: 100; }
     #wrapper header .titMain {
       display: inline-block;
       padding: 17px 20px; }
@@ -126,7 +130,7 @@ body > #wrapper {
   #wrapper .container {
     position: relative;
     min-height: 100%;
-    padding: 30px 23px 300px; }
+    padding: 97px 23px 30px; }
 
 footer {
   padding: 13px 25px 70px;
@@ -175,7 +179,7 @@ nav {
       nav .inner a.btMenu:after {
         background-position: -128px -38px; }
 
-.hidden {
+.hidden, .sightsList > ul > li .frmFavo input {
   overflow: hidden;
   position: absolute;
   width: 1px;
@@ -183,7 +187,7 @@ nav {
   margin: -1px !important;
   clip: rect(0 0 0 0); }
 
-#wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, nav .inner a {
+#wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, nav .inner a, .searchWrap button, .sightsList > ul > li .frmFavo label {
   overflow: hidden;
   text-indent: -9999px; }
 
@@ -412,10 +416,12 @@ textarea::placeholder {
 
 /* title */
 .titDep-02 {
-  margin-bottom: 10px;
+  margin: 33px 0 10px 0;
   color: #000;
   font-size: 1.5rem;
   font-weight: 700; }
+  .titDep-02.titTop {
+    margin-top: 0; }
 
 /* button */
 .btnDefault {
@@ -484,14 +490,35 @@ textarea::placeholder {
   .swiper.swiperRight {
     padding-right: 25px; }
   .swiper.swiperMain01 .swiper-slide a figure {
+    position: relative;
     overflow: hidden;
-    border-radius: 10px; }
+    border-radius: 10px;
+    height: 198px; }
+    .swiper.swiperMain01 .swiper-slide a figure img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: auto;
+      height: 100%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%); }
   .swiper.swiperMain01 .swiper-slide a span {
     display: block;
     margin-top: 10px;
     color: #000; }
 
 /* form */
+input[type=text], input[type=password], input[type=search], input[type=number], input[type=tel] {
+  width: 100%;
+  height: 45px;
+  padding: 0 14px;
+  line-height: 43px;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  background: #fff; }
+  input[type=text]::-webkit-search-decoration, input[type=text]::-webkit-search-cancel-button, input[type=text]::-webkit-search-results-button, input[type=text]::-webkit-search-results-decoration, input[type=password]::-webkit-search-decoration, input[type=password]::-webkit-search-cancel-button, input[type=password]::-webkit-search-results-button, input[type=password]::-webkit-search-results-decoration, input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-results-button, input[type=search]::-webkit-search-results-decoration, input[type=number]::-webkit-search-decoration, input[type=number]::-webkit-search-cancel-button, input[type=number]::-webkit-search-results-button, input[type=number]::-webkit-search-results-decoration, input[type=tel]::-webkit-search-decoration, input[type=tel]::-webkit-search-cancel-button, input[type=tel]::-webkit-search-results-button, input[type=tel]::-webkit-search-results-decoration {
+    display: none; }
+
 .selectWrap {
   position: relative; }
   .selectWrap select {
@@ -518,6 +545,65 @@ textarea::placeholder {
     border-width: 0 1px 1px 0;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg); }
+
+.searchWrap {
+  position: relative; }
+  .searchWrap input {
+    padding-right: 45px; }
+  .searchWrap button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px; }
+    .searchWrap button:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 25px;
+      height: 25px;
+      margin-top: -12.5px;
+      margin-left: -12.5px;
+      background: url(../images/common/ico_search01.svg) no-repeat 0 0/25px auto; }
+
+/* tab */
+.tabArea {
+  height: 46px;
+  margin: 0 -23px;
+  padding: 0 3px; }
+  .tabArea .tabType01 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+    .tabArea .tabType01 > li {
+      width: 100%; }
+      .tabArea .tabType01 > li > a {
+        position: relative;
+        display: block;
+        height: 46px;
+        line-height: 46px;
+        text-align: center; }
+        .tabArea .tabType01 > li > a span {
+          position: relative;
+          display: inline-block;
+          color: #000;
+          font-weight: 500;
+          font-size: 1.5rem;
+          line-height: 46px; }
+          .tabArea .tabType01 > li > a span:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 5px;
+            border-radius: 5px;
+            background: #fff; }
+      .tabArea .tabType01 > li.tabON > a span:after {
+        background: #2CA8EC; }
 
 /* main */
 .workingCalc {
@@ -633,3 +719,72 @@ textarea::placeholder {
         border-width: 1px 1px 0 0;
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg); }
+
+.sightsList {
+  margin: 10px -23px 0; }
+  .sightsList > ul > li {
+    position: relative;
+    margin-top: 21px; }
+    .sightsList > ul > li a {
+      position: relative;
+      display: block;
+      padding: 0 25px;
+      z-index: 10;
+      overflow: hidden; }
+      .sightsList > ul > li a:after {
+        content: '';
+        display: block;
+        clear: both; }
+      .sightsList > ul > li a figure {
+        float: left;
+        position: relative;
+        overflow: hidden;
+        width: 117px;
+        border-radius: 7px;
+        height: 90px; }
+        .sightsList > ul > li a figure img {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+      .sightsList > ul > li a .sightsInfo {
+        float: left;
+        width: calc(100% - 117px);
+        padding-left: 13px; }
+        .sightsList > ul > li a .sightsInfo .flag {
+          display: block;
+          padding-right: 25px;
+          color: #7D7D7D; }
+        .sightsList > ul > li a .sightsInfo .tit {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display: block;
+          margin-top: 6px;
+          color: #000;
+          font-size: 1.4rem;
+          font-weight: 500; }
+        .sightsList > ul > li a .sightsInfo .cont {
+          display: -webkit-box;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          height: auto;
+          margin-top: 7px;
+          color: #7D7D7D; }
+    .sightsList > ul > li .frmFavo {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      width: 22px;
+      height: 22px;
+      z-index: 100; }
+      .sightsList > ul > li .frmFavo input:checked + label {
+        background-position: -23px 0; }
+      .sightsList > ul > li .frmFavo label {
+        display: block;
+        width: 22px;
+        height: 22px;
+        background: url(../images/common/spr_icon.svg) no-repeat 0 0/250px auto; }

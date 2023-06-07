@@ -10,7 +10,7 @@
 html, body{height:100%}
 body > #wrapper{height:auto;min-height:100%}
 #wrapper{position:relative;z-index:10;background:$col_g100;
-	header{position:relative;height:67px;background:$col_white;border-bottom:1px solid $col_b07;
+	header{position:fixed;top:0;left:0;width:100%;height:67px;background:$col_white;border-bottom:1px solid $col_b07;z-index:100;
 		.titMain{display:inline-block;padding:17px 20px;
 			a{@extend %textHidden;display:inline-block;width:118px;height:28px;background:url(#{$img_url}/common/spr_layout.svg) no-repeat 0 0 / 250px auto}
 		}
@@ -27,7 +27,7 @@ body > #wrapper{height:auto;min-height:100%}
 	}
 
 	//container
-	.container{position:relative;min-height:100%;padding:30px 23px 300px}
+	.container{position:relative;min-height:100%;padding:97px 23px 30px}
 }
 
 footer{padding:13px 25px 70px;color:$col_g200;background:$col_g200}
