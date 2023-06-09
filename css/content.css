@@ -6,7 +6,7 @@
   margin: -1px !important;
   clip: rect(0 0 0 0); }
 
-#wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, nav .inner a, .searchWrap button, .sightsList > ul > li .frmFavo label {
+.searchWrap button, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, nav > .inner > a, .sightsList > ul > li .frmFavo label {
   overflow: hidden;
   text-indent: -9999px; }
 
@@ -34,151 +34,6 @@
   font-display: swap;
   src: local("NotoSansKR Bold"), url(/font/NotoSansKR-Bold.woff) format("woff"), url(/font/NotoSansKR-Bold.woff2) format("woff2"); }
 
-/* skipmenu */
-.skip a {
-  position: fixed;
-  left: 0;
-  top: -60px;
-  overflow: hidden;
-  display: block;
-  height: 0;
-  width: 0;
-  margin-bottom: -1px;
-  text-align: center;
-  white-space: nowrap;
-  color: #fff;
-  text-align: center;
-  z-index: 10001;
-  background: #2CA8EC;
-  font-size: 16px;
-  font-weight: bold; }
-  .skip a:focus, .skip a:active {
-    top: 0;
-    height: auto;
-    width: 100%;
-    color: #fff;
-    line-height: 60px; }
-
-html, body {
-  height: 100%; }
-
-body > #wrapper {
-  height: auto;
-  min-height: 100%; }
-
-#wrapper {
-  position: relative;
-  z-index: 10;
-  background: #F6F6F4; }
-  #wrapper header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 67px;
-    background: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-    z-index: 100; }
-    #wrapper header .titMain {
-      display: inline-block;
-      padding: 17px 20px; }
-      #wrapper header .titMain a {
-        display: inline-block;
-        width: 118px;
-        height: 28px;
-        background: url(/images/common/spr_layout.svg) no-repeat 0 0/250px auto; }
-    #wrapper header .topUtil {
-      position: absolute;
-      top: 15px;
-      right: 15px; }
-      #wrapper header .topUtil button {
-        display: inline-block;
-        width: 38px;
-        height: 38px;
-        background: url(/images/common/spr_layout.svg) no-repeat 0 0/250px auto; }
-        #wrapper header .topUtil button.btSos {
-          background-position: -158px 0; }
-        #wrapper header .topUtil button.btSearch {
-          background-position: -119px 0; }
-    #wrapper header .btprev {
-      position: absolute;
-      top: 21px;
-      left: 18px;
-      width: 27px;
-      height: 27px; }
-      #wrapper header .btprev:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 13px;
-        height: 13px;
-        margin-top: -6.5px;
-        margin-left: -6.5px;
-        border: solid #2CA8EC;
-        border-width: 0 0 2px 2px;
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-        margin-left: -5px; }
-    #wrapper header .titPage {
-      padding: 0 45px;
-      line-height: 67px;
-      color: #2CA8EC;
-      font-weight: 700;
-      font-size: 1.8rem; }
-  #wrapper .container {
-    position: relative;
-    min-height: 100%;
-    padding: 97px 23px 30px; }
-
-footer {
-  padding: 13px 25px 70px;
-  color: #7D7D7D;
-  background: #7D7D7D; }
-
-nav {
-  position: relative;
-  height: 45px;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  background: #fff;
-  z-index: 11; }
-  nav .inner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    height: 45px;
-    background: #fff; }
-    nav .inner a {
-      position: relative;
-      width: 100%;
-      height: 45px; }
-      nav .inner a:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 31px;
-        height: 31px;
-        margin-top: -15.5px;
-        margin-left: -15.5px;
-        background: url(/images/common/spr_layout.svg) no-repeat 0 0/250px auto; }
-      nav .inner a.btHome:after {
-        background-position: 0 -38px; }
-      nav .inner a.btWorking:after {
-        background-position: -32px -38px; }
-      nav .inner a.btStamp:after {
-        background-position: -64px -38px; }
-      nav .inner a.btMy:after {
-        background-position: -96px -38px; }
-      nav .inner a.btMenu:after {
-        background-position: -128px -38px; }
-
 .hidden, .sightsList > ul > li .frmFavo input {
   overflow: hidden;
   position: absolute;
@@ -187,7 +42,7 @@ nav {
   margin: -1px !important;
   clip: rect(0 0 0 0); }
 
-#wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, nav .inner a, .searchWrap button, .sightsList > ul > li .frmFavo label {
+.searchWrap button, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, nav > .inner > a, .sightsList > ul > li .frmFavo label {
   overflow: hidden;
   text-indent: -9999px; }
 
@@ -447,6 +302,15 @@ textarea::placeholder {
     text-align: center;
     border-radius: 5px;
     background: #2CA8EC; }
+  .btnDefault.btnM {
+    width: 100%;
+    height: 27px;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 27px;
+    text-align: center;
+    border-radius: 27px;
+    background: #2CA8EC; }
   .btnDefault.btGreen {
     background: #2AC79B; }
   .btnDefault.btBlue {
@@ -455,8 +319,8 @@ textarea::placeholder {
 /* swiper */
 .swiper {
   overflow: hidden;
-  margin: 0 -25px;
-  padding: 0 25px; }
+  margin: 0 -23px;
+  padding: 0 23px; }
   .swiper .swiper-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -605,11 +469,195 @@ input[type=text], input[type=password], input[type=search], input[type=number], 
       .tabArea .tabType01 > li.tabON > a span:after {
         background: #2CA8EC; }
 
+/* skipmenu */
+.skip a {
+  position: fixed;
+  left: 0;
+  top: -60px;
+  overflow: hidden;
+  display: block;
+  height: 0;
+  width: 0;
+  margin-bottom: -1px;
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+  text-align: center;
+  z-index: 10001;
+  background: #2CA8EC;
+  font-size: 16px;
+  font-weight: bold; }
+  .skip a:focus, .skip a:active {
+    top: 0;
+    height: auto;
+    width: 100%;
+    color: #fff;
+    line-height: 60px; }
+
+html, body {
+  height: 100%; }
+
+body > #wrapper {
+  height: auto;
+  min-height: 100%; }
+
+#wrapper {
+  position: relative;
+  z-index: 10;
+  background: #F6F6F4; }
+  #wrapper header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 67px;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    z-index: 100; }
+    #wrapper header .titMain {
+      display: inline-block;
+      padding: 17px 20px; }
+      #wrapper header .titMain a {
+        display: inline-block;
+        width: 118px;
+        height: 28px;
+        background: url(/images/common/spr_layout.svg) no-repeat 0 0/250px auto; }
+    #wrapper header .topUtil {
+      position: absolute;
+      top: 15px;
+      right: 15px; }
+      #wrapper header .topUtil button {
+        display: inline-block;
+        width: 38px;
+        height: 38px;
+        background: url(/images/common/spr_layout.svg) no-repeat 0 0/250px auto; }
+        #wrapper header .topUtil button.btSos {
+          background-position: -158px 0; }
+        #wrapper header .topUtil button.btSearch {
+          background-position: -119px 0; }
+    #wrapper header .btprev {
+      position: absolute;
+      top: 21px;
+      left: 18px;
+      width: 27px;
+      height: 27px; }
+      #wrapper header .btprev:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 13px;
+        height: 13px;
+        margin-top: -6.5px;
+        margin-left: -6.5px;
+        border: solid #2CA8EC;
+        border-width: 0 0 2px 2px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-left: -5px; }
+    #wrapper header .titPage {
+      padding: 0 45px;
+      line-height: 67px;
+      color: #2CA8EC;
+      font-weight: 700;
+      font-size: 1.8rem; }
+  #wrapper .container {
+    position: relative;
+    min-height: 100%;
+    padding: 97px 23px 30px; }
+
+footer {
+  padding: 13px 25px 25px;
+  color: #7D7D7D;
+  background: #ececec;
+  padding-bottom: calc(constant(safe-area-inset-bottom) + 25px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 25px); }
+
+nav {
+  position: relative;
+  height: 45px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background: #fff;
+  z-index: 11;
+  height: calc(constant(safe-area-inset-bottom) + 45px);
+  height: calc(env(safe-area-inset-bottom) + 45px); }
+  nav > .inner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 45px;
+    background: #fff; }
+    nav > .inner > a {
+      position: relative;
+      width: 100%;
+      height: 45px; }
+      nav > .inner > a:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 31px;
+        height: 31px;
+        margin-top: -15.5px;
+        margin-left: -15.5px;
+        background: url(/images/common/spr_layout.svg) no-repeat 0 0/250px auto; }
+      nav > .inner > a.btHome:after {
+        background-position: 0 -38px; }
+      nav > .inner > a.btWorking:after {
+        background-position: -32px -38px; }
+      nav > .inner > a.btStamp:after {
+        background-position: -64px -38px; }
+      nav > .inner > a.btMy:after {
+        background-position: -96px -38px; }
+      nav > .inner > a.btMenu:after {
+        background-position: -128px -38px; }
+
+.menuList {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 100px;
+  z-index: 1000; }
+  .menuList:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(22px);
+            backdrop-filter: blur(22px);
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.15); }
+  .menuList .inner {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    padding-top: 48px;
+    background: #fff; }
+  .menuList .navList {
+    overflow: auto;
+    height: calc(100vh - 88px); }
+  .menuList .navUtil {
+    width: calc(100vw - 55px);
+    height: 88px;
+    background: #fff; }
+
 /* main */
 .workingCalc {
-  margin: 30px -25px 0;
+  margin: 30px -23px 0;
   padding: 30px 18px 25px 40%;
-  background: url(../images/bg_workingMain.jpg) no-repeat 0 0/cover; }
+  background-repeat: no-repeat;
+  background-size: cover; }
   .workingCalc h3 {
     margin-bottom: 10px;
     color: #194643;
@@ -635,46 +683,87 @@ input[type=text], input[type=password], input[type=search], input[type=number], 
     border-radius: 5px;
     background: #C35252; }
 
-.loginAfterArea {
+.loginBeforeArea {
   text-align: center; }
-  .loginAfterArea p {
+  .loginBeforeArea p {
     padding-top: 27px;
     font-size: 1rem;
     color: #2CA8EC;
     text-align: center; }
-  .loginAfterArea .btnArea {
+  .loginBeforeArea .btnArea {
     height: 42px;
     margin-top: 20px;
     padding: 0 38px;
     text-align: center; }
-    .loginAfterArea .btnArea .btnL {
+    .loginBeforeArea .btnArea .btnL {
       display: inline-block;
       width: calc(50% - 12px);
       margin: 0 5px;
       height: 42px;
       line-height: 42px; }
-  .loginAfterArea .listAfter {
-    display: inline-block;
-    margin: 28px auto 0; }
-    .loginAfterArea .listAfter > li {
-      display: inline-block;
-      margin: 0 -2px; }
-      .loginAfterArea .listAfter > li > a {
+
+.loginAfterArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 28px; }
+  .loginAfterArea p {
+    width: 84px;
+    color: #000;
+    font-size: 1.7rem;
+    font-weight: 500; }
+    .loginAfterArea p strong {
+      color: #008AD6;
+      font-size: 2rem; }
+  .loginAfterArea .myInfoList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 3px 0 0 10px; }
+    .loginAfterArea .myInfoList > li {
+      position: relative;
+      width: 100%;
+      margin-left: 50px;
+      text-align: right; }
+      .loginAfterArea .myInfoList > li .tit {
+        position: absolute;
+        top: 3px;
+        left: 0;
         display: block;
+        color: #008AD6; }
+      .loginAfterArea .myInfoList > li strong {
+        color: #008AD6;
+        font-size: 3.7rem; }
+
+.listWrap {
+  text-align: center; }
+  .listWrap .listAfter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 28px auto 0;
+    max-width: 600px; }
+    .listWrap .listAfter > li {
+      width: 100%;
+      margin: 0 -2px;
+      text-align: center; }
+      .listWrap .listAfter > li > a {
+        display: inline-block;
         width: 61px;
         padding-top: 57px;
         color: #000;
         font-size: 1rem;
         background: url(../images/bg_loginEtc01.png) no-repeat 50% 0/50px auto; }
-      .loginAfterArea .listAfter > li.etc02 > a {
+      .listWrap .listAfter > li.etc02 > a {
         background-image: url(../images/bg_loginEtc02.png); }
-      .loginAfterArea .listAfter > li.etc03 > a {
+      .listWrap .listAfter > li.etc03 > a {
         background-image: url(../images/bg_loginEtc03.png); }
-      .loginAfterArea .listAfter > li.etc04 > a {
+      .listWrap .listAfter > li.etc04 > a {
         background-image: url(../images/bg_loginEtc04.png); }
-      .loginAfterArea .listAfter > li.etc05 > a {
+      .listWrap .listAfter > li.etc05 > a {
         background-image: url(../images/bg_loginEtc05.png); }
-  .loginAfterArea .courseNearby {
+  .listWrap .courseNearby {
     position: relative;
     display: block;
     height: 94px;
@@ -683,7 +772,7 @@ input[type=text], input[type=password], input[type=search], input[type=number], 
     background: #6CBEEB;
     border-radius: 10px;
     text-align: left; }
-    .loginAfterArea .courseNearby:after {
+    .listWrap .courseNearby:after {
       content: '';
       display: block;
       position: absolute;
@@ -692,12 +781,12 @@ input[type=text], input[type=password], input[type=search], input[type=number], 
       width: 32px;
       height: 32px;
       background: url(../images/bg_nearby.png) no-repeat 0 0/cover; }
-    .loginAfterArea .courseNearby strong {
+    .listWrap .courseNearby strong {
       display: block;
       color: #fff;
       font-size: 1.3rem;
       font-weight: 700; }
-    .loginAfterArea .courseNearby span {
+    .listWrap .courseNearby span {
       position: absolute;
       bottom: 14px;
       right: 20px;
@@ -706,7 +795,7 @@ input[type=text], input[type=password], input[type=search], input[type=number], 
       color: #fff;
       font-size: 1.3rem;
       font-weight: 700; }
-      .loginAfterArea .courseNearby span:after {
+      .listWrap .courseNearby span:after {
         content: '';
         display: block;
         position: absolute;
@@ -788,3 +877,11 @@ input[type=text], input[type=password], input[type=search], input[type=number], 
         width: 22px;
         height: 22px;
         background: url(../images/common/spr_icon.svg) no-repeat 0 0/250px auto; }
+
+.btnMoreS {
+  margin-top: 15px;
+  text-align: center; }
+  .btnMoreS .btMore {
+    display: inline-block;
+    width: auto;
+    padding: 0 27px; }

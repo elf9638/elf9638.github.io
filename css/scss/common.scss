@@ -75,12 +75,13 @@ textarea::placeholder{font-size:rem(13px)}
 	&:disabled{color:$col_white;border:none;background:$col_g300 !important}
 	&.action{color:$col_white;background:$col_point1}
 	&.btnL{width:100%;height:45px;color:$col_white;font-size:rem(15px);line-height:45px;text-align:center;border-radius:5px;background:$col_point1}
+	&.btnM{width:100%;height:27px;color:$col_white;font-size:rem(11px);line-height:27px;text-align:center;border-radius:27px;background:$col_point1}
 	&.btGreen{background:$col_gr100}
 	&.btBlue{background:$col_b100}
 }
 
 /* swiper */
-.swiper{overflow:hidden;margin:0 -25px;padding:0 25px;
+.swiper{overflow:hidden;margin:0 -23px;padding:0 23px;
 	.swiper-wrapper{display:flex;width:100%;
 		.swiper-slide{overflow:hidden;width:100%;flex-shrink:0;transition-property:transform;box-sizing:border-box;transform:none;}
 	}

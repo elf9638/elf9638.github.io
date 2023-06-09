@@ -35,7 +35,7 @@ h1,h2,h3,h4,h5,h6{font-weight:400}
 .guideList li:before{content:'';display:block;position:absolute;top:5px;left:0;width:3px;height:3px;border-radius:3px;background:#888}
 
 .htmlList{width:100%;border-top:1px solid #ccc;border-collapse:separate;border-spacing:0}
-.htmlList th, .htmlList td{padding:15px 10px;color:#111;border-bottom:1px solid #ccc;border-left:1px solid #ccc;font-size:15px;}
+.htmlList th, .htmlList td{padding:10px 10px;color:#111;border-bottom:1px solid #ccc;border-left:1px solid #ccc;font-size:15px;}
 .htmlList th:first-child, .htmlList td:first-child{border-left:none}
 .htmlList th{font-weight:500;background:#eee}
 .htmlList td{text-align:center}
