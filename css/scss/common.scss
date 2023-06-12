@@ -43,7 +43,6 @@ textarea::placeholder{font-size:rem(13px)}
 
 /* common */
 .hidden{@extend %hidden;}
-.dimmed{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba($col_black, 0.8);z-index:999}
 
 .marT32{margin-top:32px !important}
 .marT0{margin-top:0px !important}
@@ -73,11 +72,15 @@ textarea::placeholder{font-size:rem(13px)}
 /* button */
 .btnDefault{overflow:hidden;position:relative;display:inline-block;color:$col_white;text-align:center;background:$col_point1;
 	&:disabled{color:$col_white;border:none;background:$col_g300 !important}
-	&.action{color:$col_white;background:$col_point1}
-	&.btnL{width:100%;height:45px;color:$col_white;font-size:rem(15px);line-height:45px;text-align:center;border-radius:5px;background:$col_point1}
-	&.btnM{width:100%;height:27px;color:$col_white;font-size:rem(11px);line-height:27px;text-align:center;border-radius:27px;background:$col_point1}
-	&.btGreen{background:$col_gr100}
-	&.btBlue{background:$col_b100}
+}
+.btnL{width:100%;height:45px;color:$col_white;font-size:rem(15px);line-height:45px;text-align:center;border-radius:5px;background:$col_g800}
+.btnM{width:100%;height:27px;color:$col_white;font-size:rem(11px);line-height:27px;text-align:center;border-radius:27px;background:$col_point1}
+.btGreen{background:$col_gr100}
+.btBlue{background:$col_b100}
+.action{color:$col_white;background:$col_point1}
+
+.btnArea{display:flex;margin:40px -3px 0;
+	.btnDefault{margin:0 3px}
 }
 
 /* swiper */

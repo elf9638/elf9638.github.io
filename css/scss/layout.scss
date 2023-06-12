@@ -68,3 +68,27 @@ nav{position:relative;height:45px;border-top:1px solid $col_b05;background:$col_
 	}
 	.navUtil{width:calc(100vw - 55px);height:88px;background:$col_white}
 }
+
+/* layer popup */
+.layPop{position:fixed;background:$col_white;z-index:10000;
+	.titLay{@include ellipsis(1, auto);height:62px;padding:0 30px;color:$col_black;font-size:rem(15px);font-weight:$weight700;line-height:62px;text-align:center;background:$col_white}
+	
+	.txtAlert{padding:0 40px;color:$col_black;font-size:rem(13px);text-align:center;
+		+ .txtAlert{margin-top:18px}
+	}
+	.layInner{position:relative;display:flex;flex-direction:column;z-index:100;box-shadow: 0px 0px 10px rgba($col_black, 0.029);
+		.layCont{height:100%;overflow:auto}
+	}
+	&.layBtm{position:fixed;bottom:0;left:0;max-height:calc(100vh - 67px);border-radius:18px 18px 0 0;
+		.layInner{width:100%;background:$col_white;border-radius:18px 18px 0 0;
+			.layCont{padding:40px 23px 25px;}
+		}
+	}
+	&.layCent{top:50%;left:23px;right:23px;margin-top:45px;transform:translateY(-50%);background:$col_white;max-height:calc(100vh - 139px);
+		.layInner{overflow:hidden;max-height:calc(100vh - 139px);
+			.layCont{padding:0 18px 18px 18px;text-align:left}
+		}
+		.closeL{@extend %textHidden;position:absolute;top:-47px;right:0;width:31.5px;height:31.5px;background:url(#{$img_url}/common/spr_layout.svg) no-repeat -64px -102px / 250px auto;}
+	}
+}
+.dimmed{position:fixed;top:0;left:0;width:100%;height:100%;z-index:10;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);z-index:1000}
