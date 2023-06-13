@@ -6,7 +6,7 @@
   margin: -1px !important;
   clip: rect(0 0 0 0); }
 
-.searchWrap button, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, nav > .inner > a, .layPop.layCent .closeL, .sightsList > ul > li .frmFavo label {
+.searchWrap button, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, nav > .inner > a, .menuList .closeNavi, .layPop.layCent .closeL, .sightsList > ul > li .frmFavo label {
   overflow: hidden;
   text-indent: -9999px; }
 
@@ -42,7 +42,7 @@
   margin: -1px !important;
   clip: rect(0 0 0 0); }
 
-.searchWrap button, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, nav > .inner > a, .layPop.layCent .closeL, .sightsList > ul > li .frmFavo label {
+.searchWrap button, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, nav > .inner > a, .menuList .closeNavi, .layPop.layCent .closeL, .sightsList > ul > li .frmFavo label {
   overflow: hidden;
   text-indent: -9999px; }
 
@@ -646,10 +646,13 @@ nav {
     z-index: 2;
     height: 100vh;
     padding-top: 48px;
+    text-align: center;
     background: #fff; }
   .menuList .navList {
     overflow: auto;
-    height: calc(100vh - 88px); }
+    height: calc(100vh - 136px);
+    border-bottom: 1px solid rgba(216, 216, 216, 0.6);
+    border-top: 1px solid rgba(216, 216, 216, 0.6); }
     .menuList .navList ul > li {
       border-top: 1px solid rgba(216, 216, 216, 0.6); }
       .menuList .navList ul > li > a {
@@ -670,6 +673,8 @@ nav {
           height: 31px;
           margin-top: -15px;
           background: url(/images/common/spr_layout.svg) no-repeat 0 0/250px auto; }
+      .menuList .navList ul > li:first-child {
+        border-top: 0; }
       .menuList .navList ul > li.gnb01 > a:before {
         background-position: 0 -70px; }
       .menuList .navList ul > li.gnb02 > a:before {
@@ -689,9 +694,54 @@ nav {
       .menuList .navList ul > li.gnb09 > a:before {
         background-position: -32px -102px; }
   .menuList .navUtil {
-    width: calc(100vw - 55px);
+    display: inline-block;
+    max-width: 260px;
     height: 88px;
+    margin: 0 auto;
     background: #fff; }
+    .menuList .navUtil > a {
+      position: relative;
+      display: inline-block;
+      width: 81px;
+      height: 88px;
+      padding-top: 50px;
+      color: #000;
+      font-size: 1.3rem;
+      text-align: center; }
+      .menuList .navUtil > a:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 31px;
+        height: 31px;
+        margin-top: -15.5px;
+        margin-left: -15.5px;
+        top: 20px;
+        margin-top: 0;
+        background: url(/images/common/spr_layout.svg) no-repeat 0 -38px/250px auto; }
+      .menuList .navUtil > a.utilMy:after {
+        background-position: -96px -38px; }
+      .menuList .navUtil > a.utilNoti:after {
+        background-position: -158px -38px; }
+  .menuList .closeNavi {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 31px;
+    height: 31px; }
+    .menuList .closeNavi:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 26px;
+      height: 26px;
+      margin-top: -13px;
+      margin-left: -13px;
+      background: url(/images/common/spr_layout.svg) no-repeat -96px -102px/250px auto; }
 
 /* layer popup */
 .layPop {
@@ -748,7 +798,7 @@ nav {
     top: 50%;
     left: 23px;
     right: 23px;
-    margin-top: 45px;
+    margin-top: 20px;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     background: #fff;
@@ -765,6 +815,7 @@ nav {
       right: 0;
       width: 31.5px;
       height: 31.5px;
+      border-radius: 50%;
       background: url(/images/common/spr_layout.svg) no-repeat -64px -102px/250px auto; }
 
 .dimmed {
@@ -777,6 +828,42 @@ nav {
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
   z-index: 1000; }
+
+.hidden, .sightsList > ul > li .frmFavo input {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px !important;
+  clip: rect(0 0 0 0); }
+
+.searchWrap button, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, nav > .inner > a, .menuList .closeNavi, .layPop.layCent .closeL, .sightsList > ul > li .frmFavo label {
+  overflow: hidden;
+  text-indent: -9999px; }
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-weight: 300;
+  font-display: swap;
+  src: local("NotoSansKR Light"), url(/font/NotoSansKR-Light.woff) format("woff"), url(/font/NotoSansKR-Light.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-weight: 400;
+  font-display: swap;
+  src: local("NotoSansKR Regular"), url(/font/NotoSansKR-Regular.woff) format("woff"), url(/font/NotoSansKR-Regular.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-weight: 500;
+  font-display: swap;
+  src: local("NotoSansKR Medium"), url(/font/NotoSansKR-Medium.woff) format("woff"), url(/font/NotoSansKR-Medium.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-weight: 700;
+  font-display: swap;
+  src: local("NotoSansKR Bold"), url(/font/NotoSansKR-Bold.woff) format("woff"), url(/font/NotoSansKR-Bold.woff2) format("woff2"); }
 
 /* main */
 .workingCalc {
