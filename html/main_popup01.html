@@ -185,30 +185,47 @@
 			<a href="#" class="btMenu">메뉴</a>
 		</div>
 	</nav>
-	
+
 	<!-- bottom 레이어 팝업 -->
-	<div class="layPop layBtm" style="display:block">
+	<div class="layPop layCent" style="display:block">
 		<div class="layInner">
+			<h2 class="titLay">2023년 강릉바우길 다함께 걷기 축제</h2>
 			<div class="layCont">
-				<div class="txtAlert">걷는 길 이용을 위해 사용자 접근권한이 필요합니다(필수).</div>
-				<div class="txtAlert">‘걷는 길’이(가) 사용자의 위치를 <br>사용하도록 허용하겠습니까? <br>여행 중 현재 위치 찾기 및 내 위치에 따른 <br>정보를 불러오기 위해 사용합니다.</div>
+				<div class="pop_fastival">
+					<figure><img src="/images/dummy/@photo4.jpg" alt=""></figure>
+					<div class="txtFastoval">
+						<p>같은날 같은 장소에서 동시에 진행되는 코스 입니다. 중복신청 불가 합니다.</p>
+						<p>코스 사전 예약하신 분들은 2023년 6월10일(토) 오전 9:30분 전까지 경포호수광장(강원 강릉시 초당동 459-28​)으로 꼭 오셔야 합니다. ! A코스(강릉바우길 5구간, 해파랑길 35코스 일부 6.3km) 자율참석</p>
+					</div>
+				</div>
 				<div class="btnArea">
 					<button type="button" class="btnDefault btnL">취소</button>
 					<button type="button" class="btnDefault btnL action">확인</button>
 				</div>
 			</div>
 		</div>
+		<button type="button" class="closeL">닫기</button>
 	</div>
 	<!-- //bottom 레이어 팝업 -->
 
 	<div class="dimmed" style="display:block;"></div><!-- 레이어팝업 띄울때 display:none 처리 -->
+	
 </body>
 
-<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
-<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="../js/swiper.min.js"></script>
-<script type="text/javascript" src="../js/m_selectbox.js"></script>
-<script type="text/javascript" src="../js/m_common.js"></script>
+
+<script src="../js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+	var swiper = new Swiper(".swiperMain01", {
+		slidesPerView: 2,
+		spaceBetween: 13,
+		pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+		},
+	});
+</script>
 
 </html>
 

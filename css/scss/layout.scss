@@ -24,6 +24,10 @@ body > #wrapper{height:auto;min-height:100%}
 			&:after{@include pseudo(13px,13px);border:solid $col_point1;border-width:0 0 2px 2px;@include prefix(transform,rotate(45deg));margin-left:-5px}
 		}
 		.titPage{padding:0 45px;line-height:67px;color:$col_point1;font-weight:700;font-size:rem(18px)}
+		.btPrev{@extend %textHidden;position:absolute;top:50%;left:0;width:42px;height:42px;margin-top:-21px;
+			&:after{@include pseudo(26px,26px);background:url(#{$img_url}/common/spr_layout.svg) no-repeat -123px -102px / 250px auto;}
+		}
+		.titSub{padding:0 42px;color:$col_point1;font-size:rem(18px);line-height:67px;font-weight:$weight700;}
 	}
 
 	//container
@@ -81,7 +85,7 @@ nav{position:relative;height:45px;border-top:1px solid $col_b05;background:$col_
 
 /* layer popup */
 .layPop{position:fixed;background:$col_white;z-index:10000;
-	.titLay{@include ellipsis(1, auto);height:62px;padding:0 30px;color:$col_black;font-size:rem(15px);font-weight:$weight700;line-height:62px;text-align:center;background:$col_white}
+	.titLay{@include ellipsis(1, auto);flex:0 0 62px;padding:0 30px;color:$col_black;font-size:rem(15px);font-weight:$weight700;line-height:62px;text-align:center;background:$col_white}
 	
 	.txtAlert{padding:0 40px;color:$col_black;font-size:rem(13px);text-align:center;
 		+ .txtAlert{margin-top:18px}
@@ -89,16 +93,20 @@ nav{position:relative;height:45px;border-top:1px solid $col_b05;background:$col_
 	.layInner{position:relative;display:flex;flex-direction:column;z-index:100;box-shadow: 0px 0px 10px rgba($col_black, 0.029);
 		.layCont{height:100%;overflow:auto}
 	}
-	&.layBtm{position:fixed;bottom:0;left:0;max-height:calc(100vh - 67px);border-radius:18px 18px 0 0;
+	&.layBtm{position:fixed;left:0;bottom:0;max-height:calc(100vh - 67px);border-radius:18px 18px 0 0;animation-name:layBtm;animation-duration:1.5s;
 		.layInner{width:100%;background:$col_white;border-radius:18px 18px 0 0;
 			.layCont{padding:40px 23px 25px;}
 		}
 	}
-	&.layCent{top:50%;left:23px;right:23px;margin-top:20px;transform:translateY(-50%);background:$col_white;max-height:calc(100vh - 139px);
+	@keyframes layBtm {
+		0% {bottom:-100%;display:none}
+		100% {bottom:0;display:block}
+	  }
+	&.layCent{display:none;top:50%;left:23px;right:23px;margin-top:20px;transform:translateY(-50%);background:$col_white;max-height:calc(100vh - 139px);
 		.layInner{overflow:hidden;max-height:calc(100vh - 139px);
 			.layCont{padding:0 18px 18px 18px;text-align:left}
 		}
 		.closeL{@extend %textHidden;position:absolute;top:-47px;right:0;width:31.5px;height:31.5px;border-radius:50%;background:url(#{$img_url}/common/spr_layout.svg) no-repeat -64px -102px / 250px auto;}
 	}
 }
-.dimmed{position:fixed;top:0;left:0;width:100%;height:100%;z-index:10;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);z-index:1000}
+.dimmed{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:10;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);z-index:1000;transition:0.5s}
