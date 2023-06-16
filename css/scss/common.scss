@@ -71,14 +71,14 @@ textarea::placeholder{font-size:rem(13px)}
 }
 
 /* button */
-.btnDefault{overflow:hidden;position:relative;display:inline-block;color:$col_white;text-align:center;background:$col_point1;
-	&:disabled{color:$col_white;border:none;background:$col_g300 !important}
+.btnDefault{overflow:hidden;position:relative;display:inline-block;color:$col_white;text-align:center;
+	&:disabled{color:$col_white;border:none;background:$col_g600 !important}
 }
-.btnL{width:100%;height:45px;color:$col_white;font-size:rem(15px);line-height:45px;text-align:center;border-radius:5px;background:$col_g800}
-.btnM{width:100%;height:27px;color:$col_white;font-size:rem(11px);line-height:27px;text-align:center;border-radius:27px;background:$col_point1}
+.btnL{width:100%;height:45px;color:$col_black;font-size:rem(15px);line-height:45px;text-align:center;border:1px solid $col_g200;border-radius:5px;background:$col_white}
+.btnM{width:100%;height:45px;color:$col_black;font-size:rem(13px);line-height:45px;text-align:center;border:1px solid $col_g200;border-radius:5px;background:$col_white}
 .btGreen{background:$col_gr100}
 .btBlue{background:$col_b100}
-.action{color:$col_white;background:$col_point1}
+.action{color:$col_white;background:$col_point1;border-color:$col_point1}
 
 .btnArea{display:flex;margin:40px -3px 0;
 	.btnDefault{margin:0 3px}
@@ -153,7 +153,7 @@ p.listStar{position:relative;padding:0 0 0 12px;color:$col_b60;font-size:rem(13p
 }
 
 /* form */
-input[type=text], input[type=password], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=email], input[type=url]{display:block;width:100%;height:45px;padding:0 14px;color:$default_col;font-size:inherit;font-family:inherit;line-height:43px;border-radius:10px;border:1px solid $col_g600;background:$col_white}
+input[type=text], input[type=password], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=email], input[type=url]{display:block;width:100%;height:45px;padding:0 14px;color:$default_col;font-size:inherit;font-family:inherit;line-height:43px;border-radius:5px;border:1px solid $col_g600;background:$col_white}
 input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=number]:focus, input[type=search]:focus, input[type=date]:focus, input[type=email]:focus, input[type=url]:focus{border-color:$col_point1;outline:0}
 input[type=text]:read-only, input[type=password]:read-only, input[type=tel]:read-only, input[type=number]:read-only, input[type=search]:read-only, input[type=date]:read-only, input[type=email]:read-only, input[type=url]:read-only{color:$col_g500;border-color:$col_g300;background:$col_g700}
 input[type=text]:disabled, input[type=password]:disabled, input[type=tel]:disabled, input[type=number]:disabled, input[type=search]:disabled, input[type=date]:disabled, input[type=email]:disabled, input[type=url]:disabled{color:$col_g100;border-color:$col_g300;background:$col_g700}
@@ -221,14 +221,3 @@ textarea::placeholder{font-size:rem(14px)}
 	}
 }
 
-/* button */
-.btnDefault{overflow:hidden;position:relative;display:inline-block;color:$col_point1;text-align:center;background:$col_white;
-	&:disabled{color:$col_white !important;border:none;background:$col_g600 !important}
-	//&:active{background:$col_p300}
-	&.action{color:$col_white;border-color:$col_point1;background:$col_point1;
-		&:active{background:$col_point1}
-	}
-}
-.btnL{width:100%;height:45px;color:$col_point1;font-size:rem(13px);line-height:43px;text-align:center;border:1px solid $col_g200;border-radius:5px;}
-.btnM{width:100%;height:50px;color:$col_g100;font-size:rem(14px);font-weight:$weight500;line-height:48px;text-align:center;border:1px solid $col_g100;border-radius:10px;background:$col_white}
-.btnS{display:inline-block;height:26px;padding:0 9px;color:$col_g500;font-size:rem(14px);font-weight:$weight500;line-height:24px;text-align:center;border:1px solid $col_g400;border-radius:4px;background:$col_white}

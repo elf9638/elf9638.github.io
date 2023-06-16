@@ -24,20 +24,25 @@
 			<div class="loginArea marT40">
 				<ul class="inpList">
 					<li>
-						<input type="text" title="이름을 입력하세요" id="inpName" required>
+						<input type="text" title="이름을 입력하세요" id="inpName" required value="홍길동">
 						<label for="inpName">이름<span>를 입력하세요</span></label>
 						<button type="button" class="icDel">삭제</button>
 					</li>
 					<li class="inpCert">
 						<div class="certWrap">
-							<input type="tel" title="휴대폰 번호를 입력하세요" id="inpPhone" required>
+							<input type="tel" title="휴대폰 번호를 입력하세요" id="inpPhone" required value="01022223333">
 							<label for="inpPhone">휴대폰 번호<span>를 입력하세요</span></label>
 							<button type="button" class="icDel">삭제</button>
 						</div>
-						<button type="button" class="btnDefault btnM">인증전송</button>
+						<button type="button" class="btnDefault btnM action">재발송</button>
+					</li>
+					<li class="inpCertTime">
+						<input type="tel" title="인증번호를 입력해주세요." id="inpCertNum" required>
+						<label for="inpCertNum">인증번호<span>를 입력하세요</span></label>
+						<span class="certTime">02:59</span>
 					</li>
 				</ul>
-				<button type="button" class="btnDefault btnL action" disabled>확인</button>
+				<button type="button" class="btnDefault btnL action">확인</button>
 			</div>
 
 			<!-- // end of contents -->
@@ -45,6 +50,13 @@
 	
 	
 	</section>
+
+	<!-- 토스트팝업 -->
+	<div class="toastPopup" style="display:block"><!-- 토스트팝업 호출 시 display:block 처리 -->
+		<p class="txt">인증번호를 확인해주세요.</p>
+		<button type="button" class="close"></button>
+	</div>
+	<!-- //토스트팝업 -->
 	
 	
 </body>
