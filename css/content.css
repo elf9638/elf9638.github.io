@@ -280,32 +280,33 @@ textarea::placeholder {
   position: relative;
   display: inline-block;
   color: #fff;
-  text-align: center;
-  background: #2CA8EC; }
+  text-align: center; }
   .btnDefault:disabled {
     color: #fff;
     border: none;
-    background: #D8D8D8 !important; }
+    background: #c8c8c8 !important; }
 
 .btnL {
   width: 100%;
   height: 45px;
-  color: #fff;
+  color: #000;
   font-size: 1.5rem;
   line-height: 45px;
   text-align: center;
+  border: 1px solid #7D7D7D;
   border-radius: 5px;
-  background: #474747; }
+  background: #fff; }
 
 .btnM {
   width: 100%;
-  height: 27px;
-  color: #fff;
-  font-size: 1.1rem;
-  line-height: 27px;
+  height: 45px;
+  color: #000;
+  font-size: 1.3rem;
+  line-height: 45px;
   text-align: center;
-  border-radius: 27px;
-  background: #2CA8EC; }
+  border: 1px solid #7D7D7D;
+  border-radius: 5px;
+  background: #fff; }
 
 .btGreen {
   background: #2AC79B; }
@@ -315,7 +316,8 @@ textarea::placeholder {
 
 .action {
   color: #fff;
-  background: #2CA8EC; }
+  background: #2CA8EC;
+  border-color: #2CA8EC; }
 
 .btnArea {
   display: -webkit-box;
@@ -324,6 +326,14 @@ textarea::placeholder {
   margin: 40px -3px 0; }
   .btnArea .btnDefault {
     margin: 0 3px; }
+
+.floatingBtns .btnArea {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 23px;
+  background: #F6F6F4; }
 
 /* swiper */
 .swiper {
@@ -393,27 +403,36 @@ input[type=text], input[type=password], input[type=search], input[type=number], 
     display: none; }
 
 .selectWrap {
-  position: relative; }
+  position: relative;
+  height: 45px; }
   .selectWrap select {
-    width: 100%;
-    height: 32px;
-    padding: 0 10px;
-    color: #666;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    border: none;
     -webkit-appearance: none;
        -moz-appearance: none;
-            appearance: none; }
-  .selectWrap::after {
+            appearance: none;
+    width: 100%;
+    border: none;
+    height: 43px;
+    padding: 0 14px;
+    color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    border: 1px solid #7D7D7D;
+    background: #fff; }
+  .selectWrap:after {
     content: '';
     display: block;
     position: absolute;
     top: 50%;
-    right: 10px;
-    width: 5px;
-    height: 5px;
-    margin-top: -3px;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    margin-top: -7px;
+    margin-left: -7px;
+    left: auto;
+    margin-left: 0;
+    right: 15px;
+    width: 6px;
+    height: 6px;
+    margin-top: -6px;
     border: solid #000;
     border-width: 0 1px 1px 0;
     -webkit-transform: rotate(45deg);
@@ -440,6 +459,42 @@ input[type=text], input[type=password], input[type=search], input[type=number], 
       margin-top: -12.5px;
       margin-left: -12.5px;
       background: url(../images/common/ico_search01.svg) no-repeat 0 0/25px auto; }
+
+.laySelectbox {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-height: calc(100vh - 67px);
+  padding: 16px 0 0 0;
+  border-radius: 18px 18px 0 0;
+  -webkit-animation-name: layBtm;
+          animation-name: layBtm;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  z-index: 9999;
+  -webkit-box-shadow: 0px 10px 10px #000000;
+          box-shadow: 0px 10px 10px #000000;
+  background: #fff; }
+  .laySelectbox .selectInner {
+    overflow: auto;
+    max-height: calc(100vh - 83px);
+    border-top: 1px solid #D8D8D8; }
+    .laySelectbox .selectInner .selectList > li > a {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
+      padding: 0 27px;
+      color: #222;
+      line-height: 47px;
+      border-top: 1px solid #D8D8D8;
+      font-weight: 500;
+      font-size: 1.8rem; }
+      .laySelectbox .selectInner .selectList > li > a.selON {
+        background: #3324240F; }
+    .laySelectbox .selectInner .selectList > li:first-child a {
+      border-top: 0; }
 
 /* tab */
 .tabArea {
@@ -513,7 +568,7 @@ input[type=text], input[type=password], input[type=tel], input[type=number], inp
   font-size: inherit;
   font-family: inherit;
   line-height: 43px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid #c8c8c8;
   background: #fff; }
 
@@ -655,8 +710,7 @@ textarea::placeholder {
     padding: 2px 0 2px 26px;
     line-height: 1.3;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-weight: 500; }
+            box-sizing: border-box; }
     .frmInp label:before {
       content: '';
       display: block;
@@ -686,60 +740,6 @@ textarea::placeholder {
   margin-top: 9px; }
   .inpList > li:first-child {
     margin-top: 0; }
-
-/* button */
-.btnDefault {
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-  color: #2CA8EC;
-  text-align: center;
-  background: #fff; }
-  .btnDefault:disabled {
-    color: #fff !important;
-    border: none;
-    background: #c8c8c8 !important; }
-  .btnDefault.action {
-    color: #fff;
-    border-color: #2CA8EC;
-    background: #2CA8EC; }
-    .btnDefault.action:active {
-      background: #2CA8EC; }
-
-.btnL {
-  width: 100%;
-  height: 45px;
-  color: #2CA8EC;
-  font-size: 1.3rem;
-  line-height: 43px;
-  text-align: center;
-  border: 1px solid #7D7D7D;
-  border-radius: 5px; }
-
-.btnM {
-  width: 100%;
-  height: 50px;
-  color: #F6F6F4;
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 48px;
-  text-align: center;
-  border: 1px solid #F6F6F4;
-  border-radius: 10px;
-  background: #fff; }
-
-.btnS {
-  display: inline-block;
-  height: 26px;
-  padding: 0 9px;
-  color: #666;
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 24px;
-  text-align: center;
-  border: 1px solid #cecece;
-  border-radius: 4px;
-  background: #fff; }
 
 /* skipmenu */
 .skip a {
@@ -862,6 +862,8 @@ body > #wrapper {
     position: relative;
     min-height: 100%;
     padding: 97px 23px 30px; }
+  #wrapper.compWrapper .container {
+    padding: 67px 0 0 0; }
 
 footer {
   padding: 13px 25px 25px;
@@ -1081,6 +1083,7 @@ nav {
     position: fixed;
     left: 0;
     bottom: 0;
+    width: 100%;
     max-height: calc(100vh - 67px);
     border-radius: 18px 18px 0 0;
     -webkit-animation-name: layBtm;
@@ -1141,12 +1144,12 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 10;
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
   z-index: 1000;
   -webkit-transition: 0.5s;
-  transition: 0.5s; }
+  transition: 0.5s;
+  background: rgba(102, 102, 102, 0.2); }
 
 .hidden, .frmInp input, .sightsList > ul > li .frmFavo input {
   overflow: hidden;
@@ -1451,9 +1454,8 @@ nav {
     .loginArea .inpList > li input:not(:focus):valid, .loginArea .inpList > li input:focus {
       padding-top: 12px; }
       .loginArea .inpList > li input:not(:focus):valid + label, .loginArea .inpList > li input:focus + label {
-        top: 4px;
+        top: -9px;
         width: auto;
-        line-height: 1.3;
         color: #2CA8EC;
         font-size: 0.9rem; }
         .loginArea .inpList > li input:not(:focus):valid + label span, .loginArea .inpList > li input:focus + label span {
@@ -1468,6 +1470,26 @@ nav {
     width: 19px;
     height: 19px;
     background: url(../images/common/spr_icon.svg) no-repeat -72px 0/250px auto; }
+  .loginArea .inpList > li.inpCert {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+    .loginArea .inpList > li.inpCert .certWrap {
+      width: 100%;
+      position: relative; }
+    .loginArea .inpList > li.inpCert .btnM {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 88px;
+              flex: 0 0 88px;
+      margin: 0 0 0 10px; }
+  .loginArea .inpList > li.inpCertTime .certTime {
+    position: absolute;
+    top: 12px;
+    right: 19px;
+    color: #FF6D6D;
+    font-size: 1.3rem;
+    font-weight: 500; }
 
 .loginArea .btnDefault {
   margin-top: 35px; }
@@ -1534,23 +1556,32 @@ nav {
 .toastPopup {
   display: none;
   position: fixed;
-  top: 83px;
   left: 11px;
   right: 11px;
+  min-height: 48px;
   padding: 7px 30px 7px 12px;
   border-radius: 5px;
   background: #332424;
   z-index: 9999;
   -webkit-animation-name: toastPop;
           animation-name: toastPop;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s; }
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
   .toastPopup .txt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 48px;
     padding: 0 0 0 34px;
     color: #FF6D6D;
     font-size: 1.2rem;
     line-height: 1.4;
-    background: url(../images/ico_txt.png) no-repeat 0 50%/17px auto; }
+    background: url(../images/ico_txt.png) no-repeat 0 50%/17px auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .toastPopup .close {
     position: absolute;
     top: 50%;
@@ -1561,13 +1592,77 @@ nav {
     background: url(../images/btn_x_r.svg) no-repeat 50% 50%/27px auto; }
 
 @-webkit-keyframes toastPop {
-  from {
+  0% {
     top: -100px; }
-  to {
-    top: 83px; } }
+  45% {
+    top: 83px; }
+  50% {
+    top: 83px; }
+  80% {
+    top: 83px; }
+  100% {
+    top: -100px; } }
 
 @keyframes toastPop {
-  from {
+  0% {
     top: -100px; }
-  to {
-    top: 83px; } }
+  45% {
+    top: 83px; }
+  50% {
+    top: 83px; }
+  80% {
+    top: 83px; }
+  100% {
+    top: -100px; } }
+
+.CompWrap {
+  height: calc(100vh - 67px);
+  background: url(/images/img_comp01.jpg) no-repeat 50% 100%/100% auto; }
+  .CompWrap .compInner {
+    padding: 78px 23px 0 23px;
+    text-align: center;
+    background: url(/images/img_comp02.jpg) no-repeat 0 calc(100% - 45px)/100% auto; }
+    .CompWrap .compInner .txt {
+      display: block;
+      padding-top: 120px;
+      color: #000;
+      font-size: 2rem;
+      font-weight: 700;
+      background: url(/images/bg_comp.png) no-repeat 50% 0/81px auto; }
+      .CompWrap .compInner .txt em {
+        color: #2CA8EC; }
+    .CompWrap .compInner .date {
+      display: block;
+      margin-top: 5px;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 1.3rem; }
+    .CompWrap .compInner .btnL {
+      margin-top: 85px; }
+
+.txtRegist {
+  margin-top: 47px;
+  padding: 5px 0 5px 67px;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: url(/images/img_register.svg) no-repeat 2px 0/52px auto; }
+  .txtRegist em {
+    color: #2CA8EC; }
+
+.agreeArea {
+  margin-top: 33px; }
+  .agreeArea .totChk {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #707070; }
+  .agreeArea .chkList {
+    margin-top: 30px; }
+    .agreeArea .chkList > li {
+      margin-top: 23px; }
+      .agreeArea .chkList > li .frmInp + a {
+        display: inline-block;
+        width: calc(100% - 26px);
+        padding-left: 10px;
+        color: #000;
+        font-size: 1.5rem;
+        line-height: 26px;
+        vertical-align: top; }

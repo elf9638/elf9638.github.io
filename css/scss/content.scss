@@ -152,3 +152,18 @@
 		.btnL{margin-top:85px}
 	}
 }
+
+//회원가입
+.txtRegist{margin-top:47px;padding:5px 0 5px 67px;color:$col_black;font-size:rem(15px);font-weight:$weight700;background:url(#{$img_url}/img_register.svg) no-repeat 2px 0 / 52px auto;
+	em{color:$col_point1}
+}
+.agreeArea{margin-top:33px;
+	.totChk{padding-bottom:30px;border-bottom:1px solid $col_g900}
+	.chkList{margin-top:30px;
+		>li{margin-top:23px;
+			.frmInp{
+				+ a{display:inline-block;width:calc(100% - 26px);padding-left:10px;color:$col_black;font-size:rem(15px);line-height:26px;vertical-align:top}
+			}
+		}
+	}
+}
