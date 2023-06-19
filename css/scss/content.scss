@@ -86,7 +86,7 @@
 
 //login
 .loginCheck{margin-top:10px}
-.loginArea, .pwChange{
+.loginArea, .pwChange, .registArea02{
 	.btnDefault{margin-top:35px}
 }
 .loginBtns{display:flex;margin:20px -23px 0;
@@ -142,5 +142,28 @@
 				+ a{display:inline-block;width:calc(100% - 26px);padding-left:10px;color:$col_black;font-size:rem(15px);line-height:26px;vertical-align:top}
 			}
 		}
+	}
+}
+.withdrawWrap{
+	h2{margin-bottom:15px;padding-bottom:16px;color:$col_black;font-size:rem(15px);font-weight:$weight700;border-bottom:1px solid rgba($col_g900, 0.36);}
+	h3{margin-top:15px;color:$col_b60;font-size:rem(13px)}
+	p{color:$col_b60;font-size:rem(13px)}
+	.withList{margin-top:15px;
+		> li{color:$col_b60;font-size:rem(13px)}
+	}
+}
+
+.registArea{
+	.titDep-02:first-child{margin-top:0}
+	.btnDefault{margin-top:35px}
+}
+
+.registComp{height:calc(100vh - 67px);background:url(#{$img_url}/img_registComp02.png) no-repeat 50% 100% / 100% auto;
+	.compInner{padding:20px 0 0 0;text-align:center;
+  		.txt{display:block;padding-top:185px;color:$col_black;font-size:rem(20px);font-weight:$weight400;background:url(#{$img_url}/img_registComp01.png) no-repeat 50% 0 / 100% auto;
+  			em{color:$col_point1;font-weight:$weight700;}
+		}
+		.date{display:block;margin-top:5px;color:$col_b60;font-size:rem(13px)}
+		.btnL{margin-top:85px}
 	}
 }

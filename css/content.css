@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.hidden, .frmInp input, .frmFavo input, .sightsList > ul > li .frmFavo input {
+.hidden, .frmInp input, .boxFrm > .frmInp > input, .frmFavo input, .sightsList > ul > li .frmFavo input {
   overflow: hidden;
   position: absolute;
   width: 1px;
@@ -7,7 +7,7 @@
   margin: -1px !important;
   clip: rect(0 0 0 0); }
 
-.inpList > li .icDel, .searchWrap button, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, #wrapper header .btPrev, nav > .inner > a, .menuList .closeNavi, .layPop.layCent .closeL, .frmFavo label, .closeL, .topSearch > button, .inquiryCont .inquiryWrite .textArea textarea + label, .sightsList > ul > li .frmFavo label {
+.inpList > li .icDel, .inpList > li .ness, .searchWrap button, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, #wrapper header .btPrev, #wrapper header .stepType > li, nav > .inner > a, .menuList .closeNavi, .layPop.layCent .closeL, .frmFavo label, .closeL, .topSearch > button, .inquiryCont .inquiryWrite .textArea textarea + label, .sightsList > ul > li .frmFavo label {
   overflow: hidden;
   text-indent: -9999px; }
 
@@ -35,7 +35,7 @@
   font-display: swap;
   src: local("NotoSansKR Bold"), url(/font/NotoSansKR-Bold.woff) format("woff"), url(/font/NotoSansKR-Bold.woff2) format("woff2"); }
 
-.hidden, .frmInp input, .frmFavo input, .sightsList > ul > li .frmFavo input {
+.hidden, .frmInp input, .boxFrm > .frmInp > input, .frmFavo input, .sightsList > ul > li .frmFavo input {
   overflow: hidden;
   position: absolute;
   width: 1px;
@@ -43,7 +43,7 @@
   margin: -1px !important;
   clip: rect(0 0 0 0); }
 
-.inpList > li .icDel, .searchWrap button, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, #wrapper header .btPrev, nav > .inner > a, .menuList .closeNavi, .layPop.layCent .closeL, .frmFavo label, .closeL, .topSearch > button, .inquiryCont .inquiryWrite .textArea textarea + label, .sightsList > ul > li .frmFavo label {
+.inpList > li .icDel, .inpList > li .ness, .searchWrap button, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, #wrapper header .btPrev, #wrapper header .stepType > li, nav > .inner > a, .menuList .closeNavi, .layPop.layCent .closeL, .frmFavo label, .closeL, .topSearch > button, .inquiryCont .inquiryWrite .textArea textarea + label, .sightsList > ul > li .frmFavo label {
   overflow: hidden;
   text-indent: -9999px; }
 
@@ -634,12 +634,49 @@ textarea::placeholder {
       font-size: 1.5rem;
       color: #000; }
 
+.boxFrm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -5px; }
+  .boxFrm > .frmInp {
+    position: relative;
+    width: 100%;
+    padding: 0 5px; }
+    .boxFrm > .frmInp > input:checked + label {
+      color: #000;
+      border-color: #2CA8EC; }
+    .boxFrm > .frmInp label {
+      position: relative;
+      display: block;
+      height: 45px;
+      padding: 0;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 1.3rem;
+      line-height: 43px;
+      border: 1px solid #7D7D7D;
+      text-align: center;
+      border-radius: 5px;
+      background: #fff; }
+      .boxFrm > .frmInp label:before, .boxFrm > .frmInp label:after {
+        display: none; }
+
+.selBirth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -5px; }
+  .selBirth > li {
+    position: relative;
+    width: 100%;
+    padding: 0 5px; }
+
 .inpList > li {
   position: relative;
   margin-top: 9px; }
   .inpList > li:first-child {
     margin-top: 0; }
-  .inpList > li label {
+  .inpList > li > label {
     position: absolute;
     top: 0;
     left: 0;
@@ -653,19 +690,22 @@ textarea::placeholder {
     transition: 0.3s;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
-  .inpList > li input {
+  .inpList > li > input[type=text], .inpList > li input[type=password], .inpList > li input[type=tel], .inpList > li input[type=number] {
     -webkit-transition: 0.3s;
     transition: 0.3s; }
-    .inpList > li input:not(:focus):valid, .inpList > li input:focus {
+    .inpList > li > input[type=text]:not(:focus):valid, .inpList > li > input[type=text]:focus, .inpList > li input[type=password]:not(:focus):valid, .inpList > li input[type=password]:focus, .inpList > li input[type=tel]:not(:focus):valid, .inpList > li input[type=tel]:focus, .inpList > li input[type=number]:not(:focus):valid, .inpList > li input[type=number]:focus {
       padding-top: 12px; }
-      .inpList > li input:not(:focus):valid + label, .inpList > li input:focus + label {
-        top: -9px;
+      .inpList > li > input[type=text]:not(:focus):valid + label, .inpList > li > input[type=text]:focus + label, .inpList > li input[type=password]:not(:focus):valid + label, .inpList > li input[type=password]:focus + label, .inpList > li input[type=tel]:not(:focus):valid + label, .inpList > li input[type=tel]:focus + label, .inpList > li input[type=number]:not(:focus):valid + label, .inpList > li input[type=number]:focus + label {
+        top: 0;
         width: auto;
         color: #2CA8EC;
-        font-size: 0.9rem; }
-        .inpList > li input:not(:focus):valid + label span, .inpList > li input:focus + label span {
+        font-size: 0.9rem;
+        line-height: 27px; }
+        .inpList > li > input[type=text]:not(:focus):valid + label span, .inpList > li > input[type=text]:focus + label span, .inpList > li input[type=password]:not(:focus):valid + label span, .inpList > li input[type=password]:focus + label span, .inpList > li input[type=tel]:not(:focus):valid + label span, .inpList > li input[type=tel]:focus + label span, .inpList > li input[type=number]:not(:focus):valid + label span, .inpList > li input[type=number]:focus + label span {
           display: none; }
-      .inpList > li input:not(:focus):valid ~ .icDel, .inpList > li input:focus ~ .icDel {
+        .inpList > li > input[type=text]:not(:focus):valid + label .ness, .inpList > li > input[type=text]:focus + label .ness, .inpList > li input[type=password]:not(:focus):valid + label .ness, .inpList > li input[type=password]:focus + label .ness, .inpList > li input[type=tel]:not(:focus):valid + label .ness, .inpList > li input[type=tel]:focus + label .ness, .inpList > li input[type=number]:not(:focus):valid + label .ness, .inpList > li input[type=number]:focus + label .ness {
+          top: 2px; }
+      .inpList > li > input[type=text]:not(:focus):valid ~ .icDel, .inpList > li > input[type=text]:focus ~ .icDel, .inpList > li input[type=password]:not(:focus):valid ~ .icDel, .inpList > li input[type=password]:focus ~ .icDel, .inpList > li input[type=tel]:not(:focus):valid ~ .icDel, .inpList > li input[type=tel]:focus ~ .icDel, .inpList > li input[type=number]:not(:focus):valid ~ .icDel, .inpList > li input[type=number]:focus ~ .icDel {
         display: block; }
   .inpList > li .icDel {
     display: none;
@@ -685,8 +725,21 @@ textarea::placeholder {
     display: flex;
     width: 100%; }
     .inpList > li.inpCert .certWrap {
-      width: 100%;
-      position: relative; }
+      width: 100%; }
+      .inpList > li.inpCert .certWrap > label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        padding: 0 13px;
+        line-height: 45px;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.3rem;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; }
     .inpList > li.inpCert .btnM {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 88px;
@@ -699,7 +752,7 @@ textarea::placeholder {
     color: #FF6D6D;
     font-size: 1.3rem;
     font-weight: 500; }
-  .inpList > li.inpWrap label {
+  .inpList > li.inpWrap > label {
     position: static;
     height: auto;
     margin-bottom: 6px;
@@ -707,6 +760,34 @@ textarea::placeholder {
     color: #2CA8EC;
     font-size: 1.2rem;
     line-height: 1.5; }
+  .inpList > li .ness {
+    display: block !important;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #2CA8EC; }
+  .inpList > li.inpComplete:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: #2CA8EC;
+    z-index: 1000; }
+  .inpList > li.inpComplete input {
+    border-color: #2CA8EC; }
+    .inpList > li.inpComplete input:not(:focus):valid ~ .icDel {
+      display: none; }
+  .inpList > li.inpError input {
+    border-color: #EE6464; }
+    .inpList > li.inpError input:not(:focus):valid + label, .inpList > li.inpError input:focus + label {
+      color: #EE6464; }
 
 .selectWrap {
   position: relative;
@@ -922,6 +1003,22 @@ body > #wrapper {
       font-size: 1.8rem;
       line-height: 67px;
       font-weight: 700; }
+    #wrapper header .stepType {
+      position: absolute;
+      top: 35px;
+      right: 20px;
+      display: inline-block; }
+      #wrapper header .stepType > li {
+        display: inline-block;
+        width: 13px;
+        height: 6px;
+        border-radius: 6px;
+        background: #c8c8c8;
+        font-size: 0;
+        margin-left: 3px; }
+        #wrapper header .stepType > li[aria-selected=true] {
+          width: 20px;
+          background: #2CA8EC; }
   #wrapper .container {
     position: relative;
     min-height: 100%;
@@ -1215,7 +1312,7 @@ nav {
   transition: 0.5s;
   background: rgba(102, 102, 102, 0.2); }
 
-.hidden, .frmInp input, .frmFavo input, .sightsList > ul > li .frmFavo input {
+.hidden, .frmInp input, .boxFrm > .frmInp > input, .frmFavo input, .sightsList > ul > li .frmFavo input {
   overflow: hidden;
   position: absolute;
   width: 1px;
@@ -1223,7 +1320,7 @@ nav {
   margin: -1px !important;
   clip: rect(0 0 0 0); }
 
-.inpList > li .icDel, .searchWrap button, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, #wrapper header .btPrev, nav > .inner > a, .menuList .closeNavi, .layPop.layCent .closeL, .frmFavo label, .closeL, .topSearch > button, .inquiryCont .inquiryWrite .textArea textarea + label, .sightsList > ul > li .frmFavo label {
+.inpList > li .icDel, .inpList > li .ness, .searchWrap button, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, #wrapper header .btPrev, #wrapper header .stepType > li, nav > .inner > a, .menuList .closeNavi, .layPop.layCent .closeL, .frmFavo label, .closeL, .topSearch > button, .inquiryCont .inquiryWrite .textArea textarea + label, .sightsList > ul > li .frmFavo label {
   overflow: hidden;
   text-indent: -9999px; }
 
@@ -1256,6 +1353,9 @@ nav {
 
 .fixedBtmWrap .container {
   padding-bottom: 100px !important; }
+
+.titSub > button {
+  margin-left: 11px; }
 
 .frmFavo {
   position: absolute; }
@@ -1542,6 +1642,56 @@ nav {
 .floatingBtns .btnArea.noBg {
   background: transparent; }
 
+.inpList > li a {
+  position: absolute;
+  top: 13px;
+  right: 13px; }
+
+.btnInpWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 9px; }
+  .btnInpWrap .frmInp {
+    width: 100%;
+    min-height: initial; }
+    .btnInpWrap .frmInp label {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin: 0 !important;
+      height: 45px !important;
+      border-radius: 5px;
+      background: #fff;
+      border: 1px solid #7D7D7D;
+      font-size: 1.2rem !important;
+      color: rgba(0, 0, 0, 0.6) !important; }
+      .btnInpWrap .frmInp label::before, .btnInpWrap .frmInp label::after {
+        display: none; }
+    .btnInpWrap .frmInp input:checked + label {
+      border-color: #2CA8EC;
+      color: #2CA8EC !important; }
+
+.inpList > li .multiForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 9px; }
+  .inpList > li .multiForm > * {
+    width: 100%; }
+
 .btDark {
   border: none;
   background: #474747;
@@ -1568,15 +1718,26 @@ nav {
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 100%; }
+  .btnBlue.info::before {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    background-image: url(../images/ico_info.png); }
+  .btnBlue.location::before {
+    width: 10px;
+    height: 12px;
+    background-color: #fff;
+    background-image: url(../images/ico_location.png); }
   .btnBlue.modify::before {
     width: 12px;
     height: 12px;
     background-image: url(../images/ico_modify.png); }
 
 .btnLine {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1586,12 +1747,17 @@ nav {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 45px;
   border-radius: 999px;
   border: 2px solid #2CA8EC;
   background: #fff;
   -webkit-box-shadow: 0px 2px 10px #00000029;
-          box-shadow: 0px 2px 10px #00000029; }
+          box-shadow: 0px 2px 10px #00000029;
+  text-indent: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
   .btnLine > span {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1599,24 +1765,42 @@ nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: auto;
     font-weight: 700;
     font-size: 1.7rem;
-    color: #2CA8EC; }
-    .btnLine > span::before {
-      content: '';
-      display: -webkit-inline-box;
-      display: -ms-inline-flexbox;
-      display: inline-flex;
-      margin-right: 10px;
-      width: 20px;
-      height: 20px;
-      background-position: 0 0;
-      background-repeat: no-repeat;
-      background-size: 100%; }
-  .btnLine.exchange span::before {
+    color: #2CA8EC;
+    white-space: nowrap;
+    opacity: 1; }
+  .btnLine::before {
+    content: '';
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100%; }
+  .btnLine > span, .btnLine::before {
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s; }
+  .btnLine.exchange::before {
     width: 30px;
     height: 23px;
     background-image: url(../images/ico_exchange.png); }
+  .btnLine.inquiry::before {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/ico_inquiry.png); }
+  .btnLine.scroll {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 45px; }
+    .btnLine.scroll > span {
+      overflow: hidden;
+      text-indent: -9999px;
+      opacity: 0; }
+    .btnLine.scroll::before {
+      margin: 0; }
 
 .btnLineGray {
   display: -webkit-inline-box;
@@ -1889,16 +2073,22 @@ nav {
               transform: translateY(-50%);
       font-size: 1rem;
       color: rgba(0, 0, 0, 0.6);
-      letter-spacing: -.8px;
       line-height: 1; }
+      .alimList > li > a .status > i {
+        display: block;
+        width: 120%;
+        margin-left: -2px;
+        font-style: normal;
+        -webkit-transform: scale(0.8);
+                transform: scale(0.8); }
       .alimList > li > a .status::before {
         content: '';
         display: block;
         width: 17px;
         height: 17px;
-        background: #707070; }
+        background: url(../images/ico_reply.png) no-repeat 0 0/100%; }
       .alimList > li > a .status.re::before {
-        background: #2CA8EC; }
+        background-image: url(../images/ico_reply_finish.png); }
     .alimList > li > a > b {
       display: block;
       margin-top: 2px;
@@ -2057,6 +2247,8 @@ nav {
         position: absolute;
         top: 50%;
         left: 15px;
+        -webkit-transform: scale(0.8);
+                transform: scale(0.8);
         font-style: normal;
         font-size: 1rem;
         color: #D8D8D8; }
@@ -2414,6 +2606,23 @@ nav {
       width: 1px;
       height: 11px;
       background: #707070; }
+
+.myInfoCont .btnWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 24px; }
+  .myInfoCont .btnWrap > a {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin: 0 0 15px auto;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #000; }
 
 .leaveCont .leaveTxt {
   font-weight: 500;
@@ -2866,7 +3075,7 @@ nav {
 .loginCheck {
   margin-top: 10px; }
 
-.loginArea .btnDefault, .pwChange .btnDefault {
+.loginArea .btnDefault, .pwChange .btnDefault, .registArea02 .btnDefault {
   margin-top: 35px; }
 
 .loginBtns {
@@ -3041,3 +3250,56 @@ nav {
         font-size: 1.5rem;
         line-height: 26px;
         vertical-align: top; }
+
+.withdrawWrap h2 {
+  margin-bottom: 15px;
+  padding-bottom: 16px;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.36); }
+
+.withdrawWrap h3 {
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.3rem; }
+
+.withdrawWrap p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.3rem; }
+
+.withdrawWrap .withList {
+  margin-top: 15px; }
+  .withdrawWrap .withList > li {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.3rem; }
+
+.registArea .titDep-02:first-child {
+  margin-top: 0; }
+
+.registArea .btnDefault {
+  margin-top: 35px; }
+
+.registComp {
+  height: calc(100vh - 67px);
+  background: url(/images/img_registComp02.png) no-repeat 50% 100%/100% auto; }
+  .registComp .compInner {
+    padding: 20px 0 0 0;
+    text-align: center; }
+    .registComp .compInner .txt {
+      display: block;
+      padding-top: 185px;
+      color: #000;
+      font-size: 2rem;
+      font-weight: 400;
+      background: url(/images/img_registComp01.png) no-repeat 50% 0/100% auto; }
+      .registComp .compInner .txt em {
+        color: #2CA8EC;
+        font-weight: 700; }
+    .registComp .compInner .date {
+      display: block;
+      margin-top: 5px;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 1.3rem; }
+    .registComp .compInner .btnL {
+      margin-top: 85px; }

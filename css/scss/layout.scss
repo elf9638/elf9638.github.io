@@ -28,6 +28,11 @@ body > #wrapper{height:auto;min-height:100%}
 			&:after{@include pseudo(26px,26px);background:url(#{$img_url}/common/spr_layout.svg) no-repeat -123px -102px / 250px auto;}
 		}
 		.titSub{padding:0 42px;color:$col_point1;font-size:rem(18px);line-height:67px;font-weight:$weight700;}
+		.stepType{position:absolute;top:35px;right:20px;display:inline-block;
+			> li{@extend %textHidden;display:inline-block;width:13px;height:6px;border-radius:6px;background:$col_g600;font-size:0;margin-left:3px;
+				&[aria-selected=true]{width:20px;background:$col_point1}
+			}
+		}
 	}
 
 	//container

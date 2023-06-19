@@ -205,15 +205,29 @@ textarea::placeholder{font-size:rem(14px)}
 		label{padding-left:34px;font-size:rem(15px);color:$col_black}
 	}
 }
+.boxFrm{display:flex;margin:0 -5px;
+	> .frmInp{position:relative;width:100%;padding:0 5px;
+		> input{@extend %hidden;
+			&:checked + label{color:$col_black;border-color:$col_point1}
+		}
+		label{position:relative;display:block;height:45px;padding:0;color:$col_b60;font-size:rem(13px);line-height:43px;border:1px solid $col_g200;text-align:center;border-radius:5px;background:$col_white;
+			&:before, &:after{display:none}
+		}
+	}
+}
+.selBirth{display:flex;margin:0 -5px;
+	> li{position:relative;width:100%;padding:0 5px;}
+}
 
 .inpList{
 	> li{position:relative;margin-top:9px;
 		&:first-child{margin-top:0}
-		label{position:absolute;top:0;left:0;display:block;width:100%;padding:0 13px;line-height:45px;color:$col_b60;font-size:rem(13px);transition:0.3s;box-sizing:border-box}
-		input{transition:0.3s;
+		> label{position:absolute;top:0;left:0;display:block;width:100%;padding:0 13px;line-height:45px;color:$col_b60;font-size:rem(13px);transition:0.3s;box-sizing:border-box}
+		> input[type=text], input[type=password], input[type=tel], input[type=number]{transition:0.3s;
 			&:not(:focus):valid, &:focus{padding-top:12px;
-				+ label{top:-9px;width:auto;color:$col_point1;font-size:rem(9px);
+				+ label{top:0;width:auto;color:$col_point1;font-size:rem(9px);line-height:27px;
 					span{display:none}
+					.ness{top:2px}
 				}
 				~ .icDel{display:block}
 			}
@@ -221,8 +235,8 @@ textarea::placeholder{font-size:rem(14px)}
 		.icDel{@extend %textHidden;display:none;position:absolute;top:13px;right:13px;width:19px;height:19px;background:url(../images/common/spr_icon.svg) no-repeat -72px 0 / 250px auto}
 		.txtPlace{margin:5px 0 15px;color:$col_r100;font-size:9px;}
 		&.inpCert{display:flex;width:100%;
-			.certWrap{width:100%;position:relative;
-				
+			.certWrap{width:100%;
+				> label{position:absolute;top:0;left:0;display:block;width:100%;padding:0 13px;line-height:45px;color:$col_b60;font-size:rem(13px);transition:0.3s;box-sizing:border-box}	
 			}
 			.btnM{flex:0 0 88px;margin:0 0 0 10px}
 		}
@@ -230,7 +244,21 @@ textarea::placeholder{font-size:rem(14px)}
 			.certTime{position:absolute;top:12px;right:19px;color:$col_point3;font-size:rem(13px);font-weight:$weight500;}
 		}
 		&.inpWrap{
-			label{position:static;height:auto;margin-bottom:6px;padding:0;color:$col_point1;font-size:rem(12px);line-height:1.5}
+			> label{position:static;height:auto;margin-bottom:6px;padding:0;color:$col_point1;font-size:rem(12px);line-height:1.5}
+		}
+		.ness{@extend %textHidden;display:block !important;position:absolute;top:6px;left:6px;width:4px;height:4px;border-radius:50%;background:$col_point1}
+		&.inpComplete{
+			&:after{content:'';display:block;position:absolute;top:13px;right:13px;width:19px;height:19px;border-radius:50%;background:$col_point1;z-index:1000}
+			input{border-color:$col_point1;
+				&:not(:focus):valid ~ .icDel{display:none}
+			}
+		}
+		&.inpError{
+			input{border-color:$col_r100;
+				&:not(:focus):valid, &:focus{
+					+ label{color:$col_r100}
+				} 
+			}
 		}
 	}
 }

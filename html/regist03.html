@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>회원가입 | 강릉바우길</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link href="../css/content.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<p class="skip"><a href="#container">본문 바로가기</a></p>
+	<section id="wrapper" class="wrapper">
+		<header>
+			<button type="button" class="btPrev">이전</button>
+			<h1 class="titSub">회원가입</h1>
+		</header>
+	
+		<div id="container" class="container">
+			<!-- start of contents -->
+
+			<div class="registArea">
+				<h2 class="titDep-02">회원정보(필수)</h2>
+				<ul class="inpList">
+					<li>
+						<input type="text" title="아이디를 입력하세요(필수)" id="inpName" required>
+						<label for="inpName">이름<span>를 입력하세요(필수)</span><span class="ness">필수입력 항목</span></label>
+						<button type="button" class="icDel">삭제</button>
+					</li>
+					<li>
+						<input type="password" title="닉네임을 입력하세요 (필수)" id="inpPW" required>
+						<label for="inpPW">비밀번호<span>를 입력하세요</span><span class="ness">필수입력 항목</span></label>
+						<button type="button" class="icDel">삭제</button>
+					</li>
+				</ul>
+				<h2 class="titDep-02">추가정보(선택)</h2>
+				<ul class="inpList">
+					<li>
+						<div class="selectWrap">
+							<select title="스탬프투어 선택">
+								<option value="01" selected>국적을 선택하세요 (선택)</option>
+								<option value="02">한국</option>
+								<option value="02">일본</option>
+								<option value="02">중국</option>
+								<option value="02">미국</option>
+							</select>
+						</div>
+					</li>
+					<li class="inpWrap">
+						<label for="inpPW">성별을 선택하세요</label>
+						<ul class="boxFrm">
+							<li class="frmInp txt"><input type="radio" id="radMale" checked><label for="radMale">남자</label></li>
+							<li class="frmInp txt"><input type="radio" id="radFemale"><label for="radFemale">여자</label></li>
+						</ul>
+					</li>
+					<li class="inpWrap">
+						<label for="inpPW">생년월일을 입력하세요</label>
+						<ul class="selBirth">
+							<li>
+								<div class="selectWrap">
+									<select title="생년 선택">
+										<option value="01" selected>1990</option>
+										<option value="02">1991</option>
+										<option value="02">1992</option>
+										<option value="02">1993</option>
+										<option value="02">1994</option>
+									</select>
+								</div>
+							</li>
+							<li>
+								<div class="selectWrap">
+									<select title="생월 선택">
+										<option value="01" selected>01</option>
+										<option value="02">02</option>
+									</select>
+								</div>
+							</li>
+							<li>
+								<div class="selectWrap">
+									<select title="생년월일을 선택">
+										<option value="01" selected>01</option>
+										<option value="02">02</option>
+									</select>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<button type="button" class="btnDefault btnL action" disabled>다음</button>
+			</div>
+
+			
+			<!-- // end of contents -->
+		</div><!-- //container -->
+		
+		
+	</section>
+	
+</body>
+
+
+</html>
+

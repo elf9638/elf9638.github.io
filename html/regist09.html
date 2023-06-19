@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>회원가입 | 강릉바우길</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link href="../css/content.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<p class="skip"><a href="#container">본문 바로가기</a></p>
+	<section id="wrapper" class="wrapper">
+		<header>
+			<button type="button" class="btPrev">이전</button>
+			<h1 class="titSub">회원가입</h1>
+			<ol class="stepType">
+				<li aria-selected="true">Step.1</li>
+				<li aria-selected="false">Step.1</li>
+				<li aria-selected="false">Step.1</li>
+			</ol>
+		</header>
+	
+		<div id="container" class="container">
+			<!-- start of contents -->
+
+			<h2 class="titDep-02 titTop">회원정보</h2>
+			<div class="registArea02 marT40">
+				<ul class="inpList">
+					<li class="inpComplete"><!-- 입력 성공 시 inpComplete 클래스 추가 -->
+						<input type="text" title="이름을 입력하세요" id="inpName" required value="홍길동">
+						<label for="inpName">이름<span>를 입력하세요</span></label>
+						<button type="button" class="icDel">삭제</button>
+					</li>
+					<li>
+						<input type="tel" title="아이디를 입력하세요" id="inpPhone" required value="01022255055">
+						<label for="inpPhone">휴대폰 번호<span>를 입력하세요</span></label>
+						<button type="button" class="icDel">삭제</button>
+						<p class="txtPlace">* 4~12자 영문, 숫자 포함</p>
+					</li>
+					<li class="inpCertTime inpError"><!-- 입력 오류 시 inpError 클래스 추가 -->
+						<input type="tel" title="인증번호를 입력해주세요." id="inpCertNum" required value="123456">
+						<label for="inpCertNum">인증번호<span>를 입력하세요</span></label>
+						<button type="button" class="icDel">삭제</button>
+					</li>
+				</ul>
+				<button type="button" class="btnDefault btnL action">확인</button>
+			</div>
+
+			
+			<!-- // end of contents -->
+		</div><!-- //container -->
+		
+		
+	</section>
+
+</body>
+
+
+</html>
+
