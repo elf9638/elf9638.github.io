@@ -68,7 +68,6 @@ textarea::placeholder{font-size:rem(13px)}
 		&.titTop{margin-top:0}
 		.titSub{display:block;margin-top:3px;color:$col_b60;font-size:rem(13px);line-height:1.2}
 	}
-	&-03{margin:0 0 12px 0;color:$col_black;font-size:rem(15px);font-weight:$weight400}
 }
 
 /* button */
@@ -81,11 +80,9 @@ textarea::placeholder{font-size:rem(13px)}
 .btBlue{background:$col_b100}
 .action{color:$col_white;background:$col_point1;border-color:$col_point1}
 
-.btLine{display:inline-block;padding:5ppx;color:$col_black;font-size:rem(15px);font-weight:$weight500}
 .btnArea{display:flex;margin:40px -3px 0;
 	.btnDefault{margin:0 3px}
 }
-.btnAreaR{margin-top:15px;text-align:right}
 
 .floatingBtns{
 	.btnArea{position:fixed;bottom:0;left:0;width:100%;padding:23px;background:$col_g100}
@@ -208,29 +205,15 @@ textarea::placeholder{font-size:rem(14px)}
 		label{padding-left:34px;font-size:rem(15px);color:$col_black}
 	}
 }
-.boxFrm{display:flex;margin:0 -5px;
-	> .frmInp{position:relative;width:100%;padding:0 5px;
-		> input{@extend %hidden;
-			&:checked + label{color:$col_black;border-color:$col_point1}
-		}
-		label{position:relative;display:block;height:45px;padding:0;color:$col_b60;font-size:rem(13px);line-height:43px;border:1px solid $col_g200;text-align:center;border-radius:5px;background:$col_white;
-			&:before, &:after{display:none}
-		}
-	}
-}
-.selBirth{display:flex;margin:0 -5px;
-	> li{position:relative;width:100%;padding:0 5px;}
-}
 
 .inpList{
 	> li{position:relative;margin-top:9px;
 		&:first-child{margin-top:0}
-		> label{position:absolute;top:0;left:0;display:block;width:100%;padding:0 13px;line-height:45px;color:$col_b60;font-size:rem(13px);transition:0.3s;box-sizing:border-box}
-		> input[type=text], input[type=password], input[type=tel], input[type=number], input[type=email]{transition:0.3s;
+		label{position:absolute;top:0;left:0;display:block;width:100%;padding:0 13px;line-height:45px;color:$col_b60;font-size:rem(13px);transition:0.3s;box-sizing:border-box}
+		input{transition:0.3s;
 			&:not(:focus):valid, &:focus{padding-top:12px;
-				+ label{top:0;width:auto;color:$col_point1;font-size:rem(9px);line-height:27px;
+				+ label{top:-9px;width:auto;color:$col_point1;font-size:rem(9px);
 					span{display:none}
-					.ness{top:2px}
 				}
 				~ .icDel{display:block}
 			}
@@ -238,8 +221,8 @@ textarea::placeholder{font-size:rem(14px)}
 		.icDel{@extend %textHidden;display:none;position:absolute;top:13px;right:13px;width:19px;height:19px;background:url(../images/common/spr_icon.svg) no-repeat -72px 0 / 250px auto}
 		.txtPlace{margin:5px 0 15px;color:$col_r100;font-size:9px;}
 		&.inpCert{display:flex;width:100%;
-			.certWrap{width:100%;
-				> label{position:absolute;top:0;left:0;display:block;width:100%;padding:0 13px;line-height:45px;color:$col_b60;font-size:rem(13px);transition:0.3s;box-sizing:border-box}	
+			.certWrap{width:100%;position:relative;
+				
 			}
 			.btnM{flex:0 0 88px;margin:0 0 0 10px}
 		}
@@ -247,40 +230,23 @@ textarea::placeholder{font-size:rem(14px)}
 			.certTime{position:absolute;top:12px;right:19px;color:$col_point3;font-size:rem(13px);font-weight:$weight500;}
 		}
 		&.inpWrap{
-			> label{position:static;height:auto;margin-bottom:6px;padding:0;color:$col_point1;font-size:rem(12px);line-height:1.5}
-		}
-		.ness{@extend %textHidden;display:block !important;position:absolute;top:6px;left:6px;width:4px;height:4px;border-radius:50%;background:$col_point1}
-		&.inpComplete{
-			&:after{content:'';display:block;position:absolute;top:13px;right:13px;width:18px;height:18px;border-radius:50%;background:url(#{$img_url}/ico_comp.svg) no-repeat 0 0 / 18px auto;z-index:1000}
-			input{border-color:$col_point1;
-				&:not(:focus):valid ~ .icDel{display:none}
-			}
-		}
-		&.inpError{
-			input{border-color:$col_r100;
-				&:not(:focus):valid, &:focus{
-					+ label{color:$col_r100}
-				} 
-			}
+			label{position:static;height:auto;margin-bottom:6px;padding:0;color:$col_point1;font-size:rem(12px);line-height:1.5}
 		}
 	}
 }
 
 .selectWrap{position:relative;height:45px;
-	select{appearance:none;width:100%;height:43px;padding:0 14px;color:$col_b60;border-radius:5px;border:1px solid $col_g200;background:$col_white;
+	select{appearance:none;width:100%;border:none;height:43px;padding:0 14px;color:$col_b60;border-radius:5px;border:1px solid $col_g200;background:$col_white;
 		&:focus{border-color:$col_point1;outline:0}
 	}
 	&:after{@include pseudo(14px,14px);left:auto;margin-left:0;right:15px;width:6px;height:6px;margin-top:-6px;border:solid $col_black;border-width:0 1px 1px 0;@include prefix(transform,rotate(45deg));}
-	&.selectS{padding-right:15px;
-		 select{display:inline-block;width:auto;height:45px;border:none;background:transparent}
+}
+.searchWrap{position:relative;
+	input{padding-right:45px}
+	button{@extend %textHidden;position:absolute;top:0;right:0;width:45px;height:45px;
+		&:after{@include pseudo(25px,25px);background:url(../images/common/ico_search01.svg) no-repeat 0 0 / 25px auto}
 	}
 }
-//.searchWrap{position:relative;
-//	input{padding-right:45px}
-//	button{@extend %textHidden;position:absolute;top:0;right:0;width:45px;height:45px;
-//		&:after{@include pseudo(25px,25px);background:url(../images/common/ico_search01.svg) no-repeat 0 0 / 25px auto}
-//	}
-//}
 
 //selectbox
 .laySelectbox{position:fixed;left:0;bottom:0;width:100%;max-height:calc(100vh - 67px);padding:16px 0 0 0;border-radius:18px 18px 0 0;animation-name:layBtm;animation-duration:1.5s;z-index:9999;box-shadow: 0px 10px 10px #000000;background:$col_white;

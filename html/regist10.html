@@ -27,40 +27,44 @@
 			<h2 class="titDep-02 titTop">회원정보</h2>
 			<div class="registArea02 marT40">
 				<ul class="inpList">
-					<li class="inpComplete"><!-- 입력 성공 시 inpComplete 클래스 추가 -->
+					<li class="inpError"><!-- 입력 오류 시 inpError 클래스 추가 -->
 						<input type="text" title="이름을 입력하세요" id="inpName" required value="홍길동">
 						<label for="inpName">이름<span>를 입력하세요</span></label>
 						<button type="button" class="icDel">삭제</button>
+						<p class="txtPlace">이름을 재확인 해주세요</p>
 					</li>
-					<li>
-						<input type="text" title="아이디를 입력하세요" id="inpPhone" required>
+					<li class="inpError">
+						<input type="text" title="아이디를 입력하세요" id="inpPhone" required value="hong98">
 						<label for="inpPhone">아이디<span>를 입력하세요</span></label>
 						<button type="button" class="icDel">삭제</button>
-						<p class="txtPlace">* 4~12자 영문, 숫자 포함</p>
+						<p class="txtPlace">이미 사용중인 아이디 입니다.</p>
 					</li>
-					<li>
-						<input type="text" title="닉네임을 입력하세요" id="inpNicname" required>
+					<li class="inpError">
+						<input type="text" title="닉네임을 입력하세요" id="inpNicname" required value="홍로드">
 						<label for="inpNicname">닉네임<span>를 입력하세요</span></label>
 						<button type="button" class="icDel">삭제</button>
+						<p class="txtPlace">이미 사용중인 닉네임 입니다.</p>
 					</li>
-					<li>
-						<input type="password" title="비밀번호를 입력하세요" id="inpPW" required>
+					<li class="inpError">
+						<input type="password" title="비밀번호를 입력하세요" id="inpPW" required value="2222222">
 						<label for="inpPW">비밀번호<span>를 입력하세요</span></label>
 						<button type="button" class="icDel">삭제</button>
-						<p class="txtPlace">* 8~16자 영문 대/소문자, 숫자, 특수문자 포함</p>
-					</li>
-					<li>
-						<input type="password" title="비밀번호 확인" id="inpPWOK" required>
+						<p class="txtPlace">8~16자 영문 대/소문자, 숫자, 특수문자 포함</p>
+					</li class="inpError">
+					<li class="inpError">
+						<input type="password" title="비밀번호 확인" id="inpPWOK" required value="1111111">
 						<label for="inpPWOK">비밀번호 확인</label>
 						<button type="button" class="icDel">삭제</button>
+						<p class="txtPlace">비밀번호를 재확인 해주세요.</p>
 					</li>
-					<li>
-						<input type="email" title="이메일을 입력하세요" id="inpEmail" required>
+					<li class="inpError">
+						<input type="email" title="이메일을 입력하세요" id="inpEmail" required value="hong98@gmail.com">
 						<label for="inpEmail">이메일을 입력하세요</label>
 						<button type="button" class="icDel">삭제</button>
+						<p class="txtPlace">이메일 주소를 재확인 해주세요.</p>
 					</li>
 				</ul>
-				<button type="button" class="btnDefault btnL action">다음</button>
+				<button type="button" class="btnDefault btnL action" disabled>다음</button>
 			</div>
 
 			

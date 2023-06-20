@@ -14,26 +14,18 @@
 		<header>
 			<button type="button" class="btPrev">이전</button>
 			<h1 class="titSub">회원가입</h1>
+			<ol class="stepType">
+				<li aria-selected="false">Step.1</li>
+				<li aria-selected="false">Step.1</li>
+				<li aria-selected="true">Step.1</li>
+			</ol>
 		</header>
 	
 		<div id="container" class="container">
 			<!-- start of contents -->
 
-			<div class="registArea">
-				<h2 class="titDep-02">회원정보(필수)</h2>
-				<ul class="inpList">
-					<li>
-						<input type="text" title="아이디를 입력하세요(필수)" id="inpName" required>
-						<label for="inpName">이름<span>를 입력하세요(필수)</span><span class="ness">필수입력 항목</span></label>
-						<button type="button" class="icDel">삭제</button>
-					</li>
-					<li>
-						<input type="password" title="닉네임을 입력하세요 (필수)" id="inpPW" required>
-						<label for="inpPW">비밀번호<span>를 입력하세요</span><span class="ness">필수입력 항목</span></label>
-						<button type="button" class="icDel">삭제</button>
-					</li>
-				</ul>
-				<h2 class="titDep-02">추가정보(선택)</h2>
+			<h2 class="titDep-02 titTop">회원정보</h2>
+			<div class="registArea02 marT40">
 				<ul class="inpList">
 					<li>
 						<div class="selectWrap">
@@ -87,6 +79,7 @@
 					</li>
 				</ul>
 				<button type="button" class="btnDefault btnL action" disabled>다음</button>
+				<p class="btnAreaR"><button type="button" class="btLine">나중에하기</button></p>
 			</div>
 
 			
@@ -95,7 +88,7 @@
 		
 		
 	</section>
-	
+
 </body>
 
 

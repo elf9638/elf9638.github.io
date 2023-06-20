@@ -167,3 +167,74 @@
 		.btnL{margin-top:85px}
 	}
 }
+
+//걷는 길 목록
+.listUtil{position:relative;margin-top:25px;
+	.listNum{padding-bottom:12px;color:$col_black;
+		em{color:$col_point1}
+	}
+	.side{position:absolute;bottom:0;right:0;
+		.selectWrap{margin-right:-11px}
+	}
+}
+.infoList{color:$col_b60;font-size:rem(13px);
+	> li{
+		&:before{content:'-';padding-right:3px}
+	}				
+}
+.workingList{@extend %fullWidth;
+	> li{position:relative;background:$col_white;
+		> a{position:relative;display:block;padding:26px 23px 25px;}
+		.photo{overflow:hidden;border-radius:8px;
+			.frmFavo{top:15px;left:15px;}
+			.stamp, .stampRoad{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+			.stamp{width:63px;height:63px;background-color:$col_white;}
+		}
+		.roadInfo{position:relative;margin-top:17px;
+			.name{display:flex;align-items:flex-end;margin:0 0 14px;font-weight:$weight700;font-size:rem(12px);color:$col_black;
+				&::before{content:'';margin-right:10px;width:22px;height:21px;background:url(../images/ico_road.png) 0 0 / 100% no-repeat;}
+				.course{margin-left:4px;font-weight:$weight700;font-size:rem(15px);color:$col_black;letter-spacing:-1.5px;}
+			}
+			.total{position:absolute;top:0;right:0;font-weight:$weight700;font-size:rem(13px);color:$col_black;letter-spacing:-1.5px;}
+						
+			.roadInfoDetail{display:flex;margin-top:11px;
+				>li{width:100%;padding-left:15px;border-left:1px solid $col_g600;
+					span{display:block;color:$col_black;font-size:rem(10px)}
+					strong{display:block;margin-top:5px;color:$col_point1;font-size:rem(17px);font-weight:$weight700;line-height:1}
+				}
+			}
+		}
+		.frmFavo{position:absolute;top:38px;left:35px}
+		
+		~ li{margin-top:7px;}
+	}
+}
+
+//구간 목록
+.sectionWrap{
+	.sectionNumlist{@extend %fullWidth;padding:25px 23px;background:$col_white;text-align:center;font-size:0;
+		.inner{display:inline-block;text-align:left;
+			>a{display:inline-block;width:34px;height:34px;margin:5px 3px;border-radius:50%;color:$col_white;font-size:rem(12px);font-weight:$weight700;text-align:center;line-height:34px;
+				&.num01{background:#245997}
+				&.num02{background:#2C884E}
+				&.num03{background:#00ADDC}
+				&.num04{background:#0085C0}
+				&.num05{background:#612976}
+				&.num06{background:#E52E62}
+				&.num07{background:#BE342C}
+				&.num08{background:#EC6E2D}
+				&.num09{background:#009B94}
+				&.num10{background:#922F7D}
+				&.num11{background:#F8AC2D}
+				&.num12{background:#009F82}
+				&.num13{background:#947D5B}
+				&.num14{background:#402F78}
+				&.num15{background:#26381B}
+				&.num16{background:#245997}
+				&.num17{background:#E79191}
+			}
+		}
+	}
+}
+//구간 상세
+.sectionPic{@extend %fullWidth;margin-top:-30px}

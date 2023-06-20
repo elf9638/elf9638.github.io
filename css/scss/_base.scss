@@ -66,6 +66,7 @@
 	%hidden{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px !important;clip:rect(0 0 0 0)}
 	%textHidden{overflow:hidden;text-indent:-9999px}
 	%size14{font-size:1.4rem;line-height:1.25}
+	%fullWidth{margin:0 -23px;}
 	
 	%box_shadow1{box-shadow:0 3px 8px rgba($col_black, 0.1)} //아래 셰도우
 	%box_shadow2{box-shadow:0 -3px 8px rgba($col_black, 0.1)}  //위 셰도우
