@@ -23,8 +23,9 @@
 	}
 }
 
-.mapArea{@extend %fullWidth;background:green;
+.mapArea{@extend %fullWidth;
 	&.full{height:100%;}
+	&.mapSection{height:calc(100vh - 67px);margin-top:-30px}
 }
 
 .stampRoad{display:block;width:94px;height:85px;background:url(../images/stamp_road.svg)  no-repeat 0 0 / 100%;}
@@ -139,7 +140,7 @@
 	&.location::before{width:10px;height:12px;background-color:$col_white;background-image:url(../images/ico_location.png);}
 	&.modify::before{width:12px;height:12px;background-image:url(../images/ico_modify.png);}
 }
-.btnLine{overflow:hidden;display:flex;justify-content:center;align-items:center;flex:1;
+.btnLine{overflow:hidden;display:flex;justify-content:center;align-items:center;flex:1;transition:all 0.5s;
 	box-sizing:border-box;
 	height:45px;
 	border-radius:999px;
@@ -153,7 +154,7 @@
 	> span, &::before{transition-delay:0.1s;}
 	&.exchange::before{width:30px;height:23px;background-image:url(../images/ico_exchange.png);}
 	&.inquiry::before{width:20px;height:20px;background-image:url(../images/ico_inquiry.png);}
-	&.scroll{flex:none;width:45px;transition:all 0.5s;
+	&.scroll{flex:none;width:45px;
 		> span{overflow:hidden;text-indent:-9999px;opacity:0;}
 		&::before{margin:0;}
 	}

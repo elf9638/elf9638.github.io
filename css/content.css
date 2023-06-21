@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.hidden, .frmInp input, .boxFrm > .frmInp > input, .frmFavo input, .sightsList > ul > li .frmFavo input {
+.hidden, .frmInp input, .boxFrm > .frmInp > input, .btTog > input, .frmFavo input, .sightsList > ul > li .frmFavo input {
   overflow: hidden;
   position: absolute;
   width: 1px;
@@ -38,7 +38,7 @@
   font-display: swap;
   src: local("NotoSansKR Bold"), url(/font/NotoSansKR-Bold.woff) format("woff"), url(/font/NotoSansKR-Bold.woff2) format("woff2"); }
 
-.hidden, .frmInp input, .boxFrm > .frmInp > input, .frmFavo input, .sightsList > ul > li .frmFavo input {
+.hidden, .frmInp input, .boxFrm > .frmInp > input, .btTog > input, .frmFavo input, .sightsList > ul > li .frmFavo input {
   overflow: hidden;
   position: absolute;
   width: 1px;
@@ -358,6 +358,9 @@ textarea::placeholder {
   width: 100%;
   padding: 23px;
   background: #F6F6F4; }
+
+.floatingBtns.bgNone .btnArea {
+  background: none; }
 
 /* swiper */
 .swiper {
@@ -812,6 +815,42 @@ textarea::placeholder {
     .inpList > li.inpError input:not(:focus):valid + label, .inpList > li.inpError input:focus + label {
       color: #EE6464; }
 
+.btTog {
+  display: inline-block;
+  position: relative; }
+  .btTog > input:checked + label:before {
+    background: #2CA8EC; }
+  .btTog > input:checked + label:after {
+    right: 3px; }
+  .btTog label {
+    display: block;
+    padding-right: 50px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.3rem;
+    line-height: 24px; }
+    .btTog label:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 44px;
+      height: 24px;
+      border-radius: 24px;
+      background: #c8c8c8; }
+    .btTog label:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 3px;
+      right: 21px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #fff;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+
 .selectWrap {
   position: relative;
   height: 45px; }
@@ -1033,13 +1072,23 @@ body > #wrapper {
     padding: 97px 23px 30px; }
   #wrapper.compWrapper .container {
     padding: 67px 0 0 0; }
+  #wrapper.mainWrapper ~ footer {
+    padding-bottom: 25px;
+    padding-bottom: calc(constant(safe-area-inset-bottom) + 25px);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 25px); }
 
 footer {
-  padding: 13px 25px 25px;
+  position: relative;
+  padding: 13px 25px 100px;
   color: #7D7D7D;
   background: #ececec;
-  padding-bottom: calc(constant(safe-area-inset-bottom) + 25px);
-  padding-bottom: calc(env(safe-area-inset-bottom) + 25px); }
+  padding-bottom: calc(constant(safe-area-inset-bottom) + 100px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 100px); }
+  footer figure {
+    position: absolute;
+    top: 30px;
+    right: 23px;
+    width: 109px; }
 
 nav {
   position: relative;
@@ -1209,6 +1258,7 @@ nav {
 
 /* layer popup */
 .layPop {
+  display: none;
   position: fixed;
   background: #fff;
   z-index: 10000; }
@@ -1265,6 +1315,10 @@ nav {
       border-radius: 18px 18px 0 0; }
       .layPop.layBtm .layInner .layCont {
         padding: 40px 23px 25px; }
+  .layPop.layBlock {
+    display: block;
+    -webkit-animation: none;
+            animation: none; }
 
 @-webkit-keyframes layBtm {
   0% {
@@ -1320,7 +1374,7 @@ nav {
   transition: 0.5s;
   background: rgba(102, 102, 102, 0.2); }
 
-.hidden, .frmInp input, .boxFrm > .frmInp > input, .frmFavo input, .sightsList > ul > li .frmFavo input {
+.hidden, .frmInp input, .boxFrm > .frmInp > input, .btTog > input, .frmFavo input, .sightsList > ul > li .frmFavo input {
   overflow: hidden;
   position: absolute;
   width: 1px;
@@ -1413,10 +1467,12 @@ nav {
       height: 12px;
       background: #707070; }
 
-.mapArea {
-  background: green; }
-  .mapArea.full {
-    height: 100%; }
+.mapArea.full {
+  height: 100%; }
+
+.mapArea.mapSection {
+  height: calc(100vh - 67px);
+  margin-top: -30px; }
 
 .stampRoad {
   display: block;
@@ -1755,6 +1811,8 @@ nav {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 45px;
@@ -1800,9 +1858,7 @@ nav {
     -webkit-box-flex: 0;
         -ms-flex: none;
             flex: none;
-    width: 45px;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s; }
+    width: 45px; }
     .btnLine.scroll > span {
       overflow: hidden;
       text-indent: -9999px;
@@ -3478,3 +3534,143 @@ nav {
 
 .sectionPic {
   margin-top: -30px; }
+
+.sectionIntro {
+  margin-top: 33px;
+  position: relative; }
+  .sectionIntro .titSection {
+    display: block;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.46; }
+  .sectionIntro .btTog {
+    position: absolute;
+    top: -5px;
+    right: 0; }
+  .sectionIntro .txtSection {
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.3rem; }
+
+.swiperGallery {
+  margin-top: 30px; }
+  .swiperGallery .galleryL .swiper-slide {
+    overflow: hidden;
+    height: 210px; }
+    .swiperGallery .galleryL .swiper-slide img {
+      width: 100%;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      -o-object-fit: cover;
+         object-fit: cover; }
+  .swiperGallery .swiperGalleryS {
+    overflow: visible;
+    margin: 8px -23px 0 0;
+    padding: 0 23px 0 0; }
+    .swiperGallery .swiperGalleryS .swiper-slide {
+      opacity: 0.2;
+      height: 33px;
+      overflow: hidden; }
+      .swiperGallery .swiperGalleryS .swiper-slide.swiper-slide-thumb-active {
+        opacity: 1; }
+
+.popSectionInfo {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-height: calc(100vh - 67px);
+  border-radius: 18px 18px 0 0;
+  background: #fff;
+  z-index: 10000; }
+  .popSectionInfo .layCont {
+    padding: 20px 30px 40px 30px; }
+  .popSectionInfo .tit {
+    display: block;
+    color: #000;
+    font-weight: 700; }
+  .popSectionInfo .myworkingList {
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -15px; }
+    .popSectionInfo .myworkingList > li {
+      width: 100%;
+      padding-left: 15px; }
+      .popSectionInfo .myworkingList > li .tit {
+        color: #000;
+        font-size: 1rem;
+        font-weight: 400; }
+      .popSectionInfo .myworkingList > li .distanceInfo {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        margin: 8px 0 0 -15px; }
+        .popSectionInfo .myworkingList > li .distanceInfo:after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -2px;
+          left: 50%;
+          width: 1px;
+          height: 20px;
+          border-left: 1px solid #c8c8c8;
+          -webkit-transform: rotate(30deg);
+          transform: rotate(30deg); }
+        .popSectionInfo .myworkingList > li .distanceInfo > span {
+          width: 100%;
+          padding-left: 15px;
+          color: #2CA8EC;
+          font-size: 1rem;
+          font-weight: 700;
+          line-height: 1; }
+          .popSectionInfo .myworkingList > li .distanceInfo > span em {
+            font-size: 1.7rem; }
+          .popSectionInfo .myworkingList > li .distanceInfo > span.time {
+            margin-top: 14px; }
+      .popSectionInfo .myworkingList > li + li {
+        border-left: 1px solid #c8c8c8; }
+  .popSectionInfo .lineDistance {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #000; }
+    .popSectionInfo .lineDistance .bar {
+      position: absolute;
+      bottom: 0;
+      height: 6px;
+      background: #2CA8EC; }
+      .popSectionInfo .lineDistance .bar:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 12px;
+        height: 15px;
+        margin-top: -7.5px;
+        margin-left: -6px;
+        top: auto;
+        left: auto;
+        bottom: 10px;
+        right: -6px;
+        margin: 0;
+        background: url(/images/ico_disPoint.svg) no-repeat 0 0/12px auto; }
+  .popSectionInfo .btMyLoca {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    height: 26px;
+    padding: 0 11px 0 17px;
+    line-height: 26px;
+    color: #fff;
+    border-radius: 26px;
+    background: #2CA8EC; }

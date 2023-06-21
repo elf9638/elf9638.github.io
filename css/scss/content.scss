@@ -238,3 +238,43 @@
 }
 //구간 상세
 .sectionPic{@extend %fullWidth;margin-top:-30px}
+.sectionIntro{margin-top:33px;position:relative;
+	.titSection{display:block;color:$col_black;font-size:rem(15px);font-weight:$weight700;line-height:1.46}
+	.btTog{position:absolute;top:-5px;right:0;}
+	.txtSection{margin-top:15px;color:$col_b60;font-size:rem(13px)}
+}
+.swiperGallery{margin-top:30px;
+	.galleryL{
+		.swiper-slide{overflow:hidden;height:210px;
+			img{width:100%;position:relative;top:50%;left:50%;transform:translate(-50%, -50%);object-fit:cover;}
+		}
+	}
+	.swiperGalleryS{overflow:visible;margin:8px -23px 0 0;padding:0 23px 0 0;
+		.swiper-slide{opacity:0.2;height:33px;overflow:hidden;
+			&.swiper-slide-thumb-active{opacity:1}
+		}
+	}
+}
+.popSectionInfo{position:fixed;left:0;bottom:0;width:100%;max-height:calc(100vh - 67px);border-radius:18px 18px 0 0;background:$col_white;z-index:10000;
+	.layCont{padding:20px 30px 40px 30px}
+	.tit{display:block;color:$col_black;font-weight:$weight700}
+	.myworkingList{margin-top:10px;display:flex;margin-left:-15px;
+		> li{width:100%;padding-left:15px;
+			.tit{color:$col_black;font-size:rem(10px);font-weight:$weight400}
+			.distanceInfo{display:flex;position:relative;margin:8px 0 0 -15px;
+				&:after{content:'';display:block;position:absolute;bottom:-2px;left:50%;width:1px;height:20px;border-left:1px solid $col_g600;@include prefix(transform,rotate(30deg));}
+				> span{width:100%;padding-left:15px;color:$col_point1;font-size:rem(10px);font-weight:$weight700;line-height:1;
+					em{font-size:rem(17px);}
+					&.time{margin-top:14px}
+				}
+			}
+			+ li{border-left:1px solid $col_g600}
+		}
+	}
+	.lineDistance{position:absolute;bottom:0;left:0;right:0;height:6px;background:$col_black;
+		.bar{position:absolute;bottom:0;height:6px;background:$col_point1;
+			&:after{@include pseudo(12px,15px);top:auto;left:auto;bottom:10px;right:-6px;margin:0;background:url(#{$img_url}/ico_disPoint.svg) no-repeat 0 0 / 12px auto}
+		}
+	}
+	.btMyLoca{position:absolute;top:17px;right:20px;height:26px;padding:0 11px 0 17px;line-height:26px;color:$col_white;border-radius:26px;background:$col_point1}
+}

@@ -52,21 +52,98 @@
 					<span>화장실</span>
 				</div>
 
-				<div class="titArea">
-					<h3 class="titSection">바우길 1구간</h3>
+				<div class="sectionIntro">
+					<h3 class="titSection">소개</h3>
 					<span class="btTog"><input type="checkbox" id="togSample01"><label for="togSample01">오디오 안내</label></span>
+					<p class="txtSection">
+						야트막한 고원에서 푸르게 펼쳐져 있는 양떼목장 울타리와 멀리서 바라보면 산 위에 흰 바람개비처럼 펼쳐져 있는 우리나라 최대의 풍력단지를 따라 백두대간의 등길을 밟고 걷는 길입니다. 정상은 해발 1157미터이지만 출발점의 높이가 850미터쯤 되는 곳이어서 걸을 때 그다지 오르막이 심하지 않습니다. 백두대간 등줄기에서 영동과 영서지방을 한눈에 바라볼 수 있으며, 봄부터 가을까지 야생화의 천국을 이루는 길입니다.
+					</p>
+				</div>
+
+				<div class="sectionIntro">
+					<h3 class="titSection">교통 정보</h3>
+					<p class="txtSection">
+						1.자가용<br>
+						네비게이션 주소 : 신재생에너지전시관(평창군 대관령면 횡계리 14-297번지)<br>
+						2.대중교통 -실시간 버스정보<br>
+						1) 강릉 시내버스 [강릉시내에서 1구간 기점.종점가기] <br>
+						① 강릉시내에서 202번, 206번, 207번, 225번, 227번, 228번, 230-1번, 233번, 302번, 314번, 512번, 512-1번 탑승 후 강릉 시외.고속버스터미널 하차 <br>
+						② 강릉시외.고속버스터미널에서 횡계시외버스공용정류장까지 시외버스 이용 (32분)<br>
+						2) 직행버스 <br>
+						* 동서울터미널 → 횡계 (동서울터미널ARS 1688-5979) <br>
+						* 횡계 → 동서울터미널 (횡계터미널 033-335-5289) <br>
+						* 강릉터미널 → 횡계 (강릉터미널ARS 033-643-6092) <br>
+						3) 택시 : 횡계 - 대관령휴게소 간 택시이용 <br>
+						* 대관령 : 개인택시 033-335-6263, 335-5960, / 횡계택시 335-5596 <br>
+						* 강릉시 : 솔향콜 1588-8234(14개업체공동운영) 강릉콜 033-644-3000 개인택시 033-651-1155, 1577-8659 <br>
+						4) 횡계 마을버스 <br>
+						- 횡계터미널 → 대관령휴게소 : 10:30. 11:40, 14:00 <br>
+						- 대관령휴게소 → 횡계터미널 : 10:40, 11:50, 14:10
+					</p>
+				</div>
+
+				<div class="swiper swiperGallery">
+					<ul class="swiper-wrapper galleryL">
+						<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+						<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+						<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+						<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+						<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+						<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+						<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+						<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+					</ul>
+					<div thumbsSlider="" class="swiper swiperGalleryS">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+							<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+							<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+							<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+							<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+							<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+							<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+							<li class="swiper-slide"><img src="/images/dummy//@img_gallery.jpg" alt=""></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-
-			<div class="floatingBtns">
+			
+			<div class="floatingBtns bgNone">
 				<div class="btnArea">
-					<button type="button" class="btnLine start"><span>시작하기</span></button>
+					<button type="button" class="btnLine start scroll"><span>시작하기</span></button><!-- scroll 클래스로 토글 제어 -->
 				</div>
 			</div>
 			
 			<!-- // end of contents -->
 		</div><!-- //container -->
 	</section>
+
+	<footer>
+		<p>강릉 걷는 길 안내소</p>
+		<p>전화번호 : 033)647-0991</p>
+		<p>주소 : 강릉시 성산면 삼포암길 17</p>
+		<figure><img src="/images/logo_sol.png" alt="솔향강릉"></figure>
+	</footer>
 	
 </body>
+
+<script src="../js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+	var swiper = new Swiper(".swiperGalleryS", {
+		spaceBetween: 4,
+		slidesPerView: 6,
+		watchSlidesProgress: true,
+	});
+	var swiper2 = new Swiper(".swiperGallery", {
+		spaceBetween: 23,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		thumbs: {
+			swiper: swiper,
+		},
+	});
+</script>
 </html>
