@@ -255,6 +255,12 @@
 		}
 	}
 }
+
+.startTime{position:absolute;top:86px;left:18px;right:18px;height:38px;padding:10px 20px;border-radius:38px;backdrop-filter: blur(8px);background:$col_b20;
+	.tit{display:inline-block;color:$col_white;font-weight:$weight400}
+	.time{display:inline-block;margin-left:22px;color:$col_white;}
+	.btStop{position:absolute;top:3px;right:3px;height:32px;padding:0 10px 0 20px;line-height:28px;color:$col_black;font-size:rem(13px);font-weight:$weight700;border:2px solid $col_black;border-radius:32px;background:$col_white url(#{$img_url}/ico_stop.svg) no-repeat 6px 50% / auto 14px}
+}
 .popSectionInfo{position:fixed;left:0;bottom:0;width:100%;max-height:calc(100vh - 67px);border-radius:18px 18px 0 0;background:$col_white;z-index:10000;
 	.layCont{padding:20px 30px 40px 30px}
 	.tit{display:block;color:$col_black;font-weight:$weight700}
@@ -268,10 +274,12 @@
 					&.time{margin-top:14px}
 				}
 			}
-			+ li{border-left:1px solid $col_g600}
+			+ li{border-left:1px solid $col_g600;
+				.distanceInfo > span{color:$col_black}
+			}
 		}
 	}
-	.lineDistance{position:absolute;bottom:0;left:0;right:0;height:6px;background:$col_black;
+	.lineDistance{position:absolute;bottom:0;left:-6px;right:-6px;height:6px;background:$col_black;
 		.bar{position:absolute;bottom:0;height:6px;background:$col_point1;
 			&:after{@include pseudo(12px,15px);top:auto;left:auto;bottom:10px;right:-6px;margin:0;background:url(#{$img_url}/ico_disPoint.svg) no-repeat 0 0 / 12px auto}
 		}

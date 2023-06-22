@@ -3578,6 +3578,39 @@ nav {
       .swiperGallery .swiperGalleryS .swiper-slide.swiper-slide-thumb-active {
         opacity: 1; }
 
+.startTime {
+  position: absolute;
+  top: 86px;
+  left: 18px;
+  right: 18px;
+  height: 38px;
+  padding: 10px 20px;
+  border-radius: 38px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.2); }
+  .startTime .tit {
+    display: inline-block;
+    color: #fff;
+    font-weight: 400; }
+  .startTime .time {
+    display: inline-block;
+    margin-left: 22px;
+    color: #fff; }
+  .startTime .btStop {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    height: 32px;
+    padding: 0 10px 0 20px;
+    line-height: 28px;
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border: 2px solid #000;
+    border-radius: 32px;
+    background: #fff url(/images/ico_stop.svg) no-repeat 6px 50%/auto 14px; }
+
 .popSectionInfo {
   position: fixed;
   left: 0;
@@ -3636,11 +3669,13 @@ nav {
             margin-top: 14px; }
       .popSectionInfo .myworkingList > li + li {
         border-left: 1px solid #c8c8c8; }
+        .popSectionInfo .myworkingList > li + li .distanceInfo > span {
+          color: #000; }
   .popSectionInfo .lineDistance {
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: -6px;
+    right: -6px;
     height: 6px;
     background: #000; }
     .popSectionInfo .lineDistance .bar {
