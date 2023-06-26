@@ -7,7 +7,7 @@
   margin: -1px !important;
   clip: rect(0 0 0 0); }
 
-.inpList > li .icDel, .inpList > li .ness, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, #wrapper header .btPrev, #wrapper header .stepType > li, nav > .inner > a, .menuList .closeNavi, .layPop.layCent .closeL, .frmFavo label, .closeL, .topSearch > button, .inquiryCont .inquiryWrite .textArea textarea + label, .sightsList > ul > li .frmFavo label {
+.inpList > li .icDel, .inpList > li .ness, #wrapper header .topUtil button, #wrapper header .btprev, #wrapper header .btPrev, #wrapper header .stepType > li, nav > .inner > a, .menuList .closeNavi, .layPop.layCent .closeL, .frmFavo label, .closeL, .topSearch > button, .inquiryCont .inquiryWrite .textArea textarea + label, .sightsList > ul > li .frmFavo label {
   overflow: hidden;
   text-indent: -9999px; }
 
@@ -46,7 +46,7 @@
   margin: -1px !important;
   clip: rect(0 0 0 0); }
 
-.inpList > li .icDel, .inpList > li .ness, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, #wrapper header .btPrev, #wrapper header .stepType > li, nav > .inner > a, .menuList .closeNavi, .layPop.layCent .closeL, .frmFavo label, .closeL, .topSearch > button, .inquiryCont .inquiryWrite .textArea textarea + label, .sightsList > ul > li .frmFavo label {
+.inpList > li .icDel, .inpList > li .ness, #wrapper header .topUtil button, #wrapper header .btprev, #wrapper header .btPrev, #wrapper header .stepType > li, nav > .inner > a, .menuList .closeNavi, .layPop.layCent .closeL, .frmFavo label, .closeL, .topSearch > button, .inquiryCont .inquiryWrite .textArea textarea + label, .sightsList > ul > li .frmFavo label {
   overflow: hidden;
   text-indent: -9999px; }
 
@@ -983,9 +983,10 @@ body > #wrapper {
       padding: 17px 20px; }
       #wrapper header .titMain a {
         display: inline-block;
-        width: 118px;
-        height: 28px;
-        background: url(/images/common/spr_layout.svg) no-repeat 0 0/250px auto; }
+        height: 33px; }
+        #wrapper header .titMain a img {
+          width: auto;
+          height: 33px; }
     #wrapper header .topUtil {
       position: absolute;
       top: 15px;
@@ -1382,7 +1383,7 @@ nav {
   margin: -1px !important;
   clip: rect(0 0 0 0); }
 
-.inpList > li .icDel, .inpList > li .ness, #wrapper header .titMain a, #wrapper header .topUtil button, #wrapper header .btprev, #wrapper header .btPrev, #wrapper header .stepType > li, nav > .inner > a, .menuList .closeNavi, .layPop.layCent .closeL, .frmFavo label, .closeL, .topSearch > button, .inquiryCont .inquiryWrite .textArea textarea + label, .sightsList > ul > li .frmFavo label {
+.inpList > li .icDel, .inpList > li .ness, #wrapper header .topUtil button, #wrapper header .btprev, #wrapper header .btPrev, #wrapper header .stepType > li, nav > .inner > a, .menuList .closeNavi, .layPop.layCent .closeL, .frmFavo label, .closeL, .topSearch > button, .inquiryCont .inquiryWrite .textArea textarea + label, .sightsList > ul > li .frmFavo label {
   overflow: hidden;
   text-indent: -9999px; }
 
