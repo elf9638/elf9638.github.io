@@ -22,9 +22,6 @@ body > #wrapper{height:auto;min-height:100%}
 				&.btSearch{background-position:-119px 0}
 			}
 		}
-		.btprev{@extend %textHidden;position:absolute;top:21px;left:18px;width:27px;height:27px;
-			&:after{@include pseudo(13px,13px);border:solid $col_point1;border-width:0 0 2px 2px;@include prefix(transform,rotate(45deg));margin-left:-5px}
-		}
 		.titPage{padding:0 45px;line-height:67px;color:$col_point1;font-weight:700;font-size:rem(18px)}
 		.btPrev{@extend %textHidden;position:absolute;top:50%;left:0;width:42px;height:42px;margin-top:-21px;
 			&:after{@include pseudo(26px,26px);background:url(#{$img_url}/common/spr_layout.svg) no-repeat -123px -102px / 250px auto;}
@@ -44,6 +41,12 @@ body > #wrapper{height:auto;min-height:100%}
 	}
 	&.mainWrapper{
 		 ~ footer{padding-bottom:25px;padding-bottom:calc(constant(safe-area-inset-bottom) + 25px);padding-bottom:calc(env(safe-area-inset-bottom) + 25px)}
+	}
+	&.emergencyWrapper{overflow:hidden;
+		header{background:$col_g100;border:none;
+			.btPrev:after{background-position:-153px -102px}
+		}
+		.container{padding:67px 0}
 	}
 }
 

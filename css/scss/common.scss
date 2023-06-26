@@ -69,16 +69,17 @@ textarea::placeholder{font-size:rem(13px)}
 		.titSub{display:block;margin-top:3px;color:$col_b60;font-size:rem(13px);line-height:1.2}
 	}
 	&-03{margin:0 0 12px 0;color:$col_black;font-size:rem(15px);font-weight:$weight400}
+	&-04{margin:0 0 12px 0;color:$col_black;font-size:rem(15px);font-weight:$weight700}
 }
 
 /* button */
 .btnDefault{overflow:hidden;position:relative;display:inline-block;color:$col_white;text-align:center;
 	&:disabled{color:$col_white;border:none;background:$col_g600 !important}
 }
-.btnL{width:100%;height:45px;color:$col_black;font-size:rem(15px);line-height:45px;text-align:center;border:1px solid $col_g200;border-radius:5px;background:$col_white}
-.btnM{width:100%;height:45px;color:$col_black;font-size:rem(13px);line-height:45px;text-align:center;border:1px solid $col_g200;border-radius:5px;background:$col_white}
-.btGreen{background:$col_gr100}
-.btBlue{background:$col_b100}
+.btnL{width:100%;height:45px;color:$col_black;font-size:rem(15px);line-height:43px;text-align:center;border:1px solid $col_g200;border-radius:5px;background:$col_white}
+.btnM{width:100%;height:45px;color:$col_black;font-size:rem(13px);line-height:43px;text-align:center;border:1px solid $col_g200;border-radius:5px;background:$col_white}
+.btGreen{color:$col_white;border-color:$col_gr100;background:$col_gr100}
+.btBlue{color:$col_white;border-color:$col_b100;background:$col_b100}
 .action{color:$col_white;background:$col_point1;border-color:$col_point1}
 
 .btLine{display:inline-block;padding:5ppx;color:$col_black;font-size:rem(15px);font-weight:$weight500}
