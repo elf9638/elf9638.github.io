@@ -3709,3 +3709,43 @@ nav {
     color: #fff;
     border-radius: 26px;
     background: #2CA8EC; }
+
+.txtAway {
+  padding-top: 69px;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  background: url(/images/bg_away.png) no-repeat 0 0/auto 63px; }
+
+.layCourseComp {
+  text-align: center; }
+  .layCourseComp .timeWrap {
+    display: inline-block; }
+    .layCourseComp .timeWrap .tit {
+      display: inline-block;
+      margin-right: 30px;
+      color: #2CA8EC;
+      font-size: 1.6rem; }
+    .layCourseComp .timeWrap .time {
+      display: inline-block;
+      margin-right: 30px;
+      color: #2CA8EC;
+      font-size: 1.6rem; }
+  .layCourseComp .courseMark {
+    margin: 20px 90px 16px; }
+  .layCourseComp .compTxt .course {
+    display: block;
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: 700; }
+  .layCourseComp .compTxt span {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 700; }
+    .layCourseComp .compTxt span strong {
+      color: #2CA8EC;
+      font-size: 1.6rem;
+      font-weight: 700; }
+      .layCourseComp .compTxt span strong em {
+        font-size: 2.4rem; }

@@ -286,3 +286,21 @@
 	}
 	.btMyLoca{position:absolute;top:17px;right:20px;height:26px;padding:0 11px 0 17px;line-height:26px;color:$col_white;border-radius:26px;background:$col_point1}
 }
+
+.txtAway{padding-top:69px;color:$col_black;font-size:rem(13px);font-weight:$weight700;text-align:center;background:url(#{$img_url}/bg_away.png) no-repeat 0 0 / auto 63px}
+
+.layCourseComp{text-align:center;
+	.timeWrap{display:inline-block;
+		.tit{display:inline-block;margin-right:30px;color:$col_point1;font-size:rem(16px)}
+		.time{display:inline-block;margin-right:30px;color:$col_point1;font-size:rem(16px)}
+	}
+	.courseMark{margin:20px 90px 16px}
+	.compTxt{
+		.course{display:block;color:$col_black;font-size:rem(16px);font-weight:$weight700}
+		span{color:$col_black;font-size:rem(15px);font-weight:$weight700;
+			strong{color:$col_point1;font-size:rem(16px);font-weight:$weight700;
+				em{font-size:rem(24px)}
+			}
+		}
+	}
+}
