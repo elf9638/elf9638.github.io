@@ -11,7 +11,7 @@
   overflow: hidden;
   text-indent: -9999px; }
 
-.workingList, .sectionWrap .sectionNumlist, .sectionPic, .mapArea, .courseList > li, .searchList, .alimList, .sightsCont .photoWrap, .sightsCont .infoDesk, .myList, .myFooter, .faqViewCont .faqCont, .inquiryView, .inquiryCont .qnaNoti {
+.boxWhite, .workingList, .noticeList, .noticeView, .noticeView .noticeCont figure, .sectionWrap .sectionNumlist, .sectionPic, .mapArea, .courseList > li, .searchList, .alimList, .sightsCont .photoWrap, .sightsCont .infoDesk, .myList, .myFooter, .faqViewCont .faqCont, .inquiryView, .inquiryCont .qnaNoti {
   margin: 0 -23px; }
 
 @font-face {
@@ -50,7 +50,7 @@
   overflow: hidden;
   text-indent: -9999px; }
 
-.workingList, .sectionWrap .sectionNumlist, .sectionPic, .mapArea, .courseList > li, .searchList, .alimList, .sightsCont .photoWrap, .sightsCont .infoDesk, .myList, .myFooter, .faqViewCont .faqCont, .inquiryView, .inquiryCont .qnaNoti {
+.boxWhite, .workingList, .noticeList, .noticeView, .noticeView .noticeCont figure, .sectionWrap .sectionNumlist, .sectionPic, .mapArea, .courseList > li, .searchList, .alimList, .sightsCont .photoWrap, .sightsCont .infoDesk, .myList, .myFooter, .faqViewCont .faqCont, .inquiryView, .inquiryCont .qnaNoti {
   margin: 0 -23px; }
 
 @font-face {
@@ -729,19 +729,33 @@ textarea::placeholder {
   .inpList > li > input[type=text], .inpList > li input[type=password], .inpList > li input[type=tel], .inpList > li input[type=number], .inpList > li input[type=email] {
     -webkit-transition: 0.3s;
     transition: 0.3s; }
-    .inpList > li > input[type=text]:not(:focus):valid, .inpList > li > input[type=text]:focus, .inpList > li input[type=password]:not(:focus):valid, .inpList > li input[type=password]:focus, .inpList > li input[type=tel]:not(:focus):valid, .inpList > li input[type=tel]:focus, .inpList > li input[type=number]:not(:focus):valid, .inpList > li input[type=number]:focus, .inpList > li input[type=email]:not(:focus):valid, .inpList > li input[type=email]:focus {
+    .inpList > li > input[type=text]:-moz-read-only, .inpList > li input[type=password]:-moz-read-only, .inpList > li input[type=tel]:-moz-read-only, .inpList > li input[type=number]:-moz-read-only, .inpList > li input[type=email]:-moz-read-only {
       padding-top: 12px; }
-      .inpList > li > input[type=text]:not(:focus):valid + label, .inpList > li > input[type=text]:focus + label, .inpList > li input[type=password]:not(:focus):valid + label, .inpList > li input[type=password]:focus + label, .inpList > li input[type=tel]:not(:focus):valid + label, .inpList > li input[type=tel]:focus + label, .inpList > li input[type=number]:not(:focus):valid + label, .inpList > li input[type=number]:focus + label, .inpList > li input[type=email]:not(:focus):valid + label, .inpList > li input[type=email]:focus + label {
+    .inpList > li > input[type=text]:not(:focus):valid, .inpList > li > input[type=text]:focus, .inpList > li > input[type=text]:read-only, .inpList > li input[type=password]:not(:focus):valid, .inpList > li input[type=password]:focus, .inpList > li input[type=password]:read-only, .inpList > li input[type=tel]:not(:focus):valid, .inpList > li input[type=tel]:focus, .inpList > li input[type=tel]:read-only, .inpList > li input[type=number]:not(:focus):valid, .inpList > li input[type=number]:focus, .inpList > li input[type=number]:read-only, .inpList > li input[type=email]:not(:focus):valid, .inpList > li input[type=email]:focus, .inpList > li input[type=email]:read-only {
+      padding-top: 12px; }
+      .inpList > li > input[type=text]:-moz-read-only + label, .inpList > li input[type=password]:-moz-read-only + label, .inpList > li input[type=tel]:-moz-read-only + label, .inpList > li input[type=number]:-moz-read-only + label, .inpList > li input[type=email]:-moz-read-only + label {
         top: 0;
         width: auto;
         color: #2CA8EC;
         font-size: 0.9rem;
         line-height: 27px; }
-        .inpList > li > input[type=text]:not(:focus):valid + label span, .inpList > li > input[type=text]:focus + label span, .inpList > li input[type=password]:not(:focus):valid + label span, .inpList > li input[type=password]:focus + label span, .inpList > li input[type=tel]:not(:focus):valid + label span, .inpList > li input[type=tel]:focus + label span, .inpList > li input[type=number]:not(:focus):valid + label span, .inpList > li input[type=number]:focus + label span, .inpList > li input[type=email]:not(:focus):valid + label span, .inpList > li input[type=email]:focus + label span {
+      .inpList > li > input[type=text]:not(:focus):valid + label, .inpList > li > input[type=text]:focus + label, .inpList > li > input[type=text]:read-only + label, .inpList > li input[type=password]:not(:focus):valid + label, .inpList > li input[type=password]:focus + label, .inpList > li input[type=password]:read-only + label, .inpList > li input[type=tel]:not(:focus):valid + label, .inpList > li input[type=tel]:focus + label, .inpList > li input[type=tel]:read-only + label, .inpList > li input[type=number]:not(:focus):valid + label, .inpList > li input[type=number]:focus + label, .inpList > li input[type=number]:read-only + label, .inpList > li input[type=email]:not(:focus):valid + label, .inpList > li input[type=email]:focus + label, .inpList > li input[type=email]:read-only + label {
+        top: 0;
+        width: auto;
+        color: #2CA8EC;
+        font-size: 0.9rem;
+        line-height: 27px; }
+        .inpList > li > input[type=text]:-moz-read-only + label span, .inpList > li input[type=password]:-moz-read-only + label span, .inpList > li input[type=tel]:-moz-read-only + label span, .inpList > li input[type=number]:-moz-read-only + label span, .inpList > li input[type=email]:-moz-read-only + label span {
           display: none; }
-        .inpList > li > input[type=text]:not(:focus):valid + label .ness, .inpList > li > input[type=text]:focus + label .ness, .inpList > li input[type=password]:not(:focus):valid + label .ness, .inpList > li input[type=password]:focus + label .ness, .inpList > li input[type=tel]:not(:focus):valid + label .ness, .inpList > li input[type=tel]:focus + label .ness, .inpList > li input[type=number]:not(:focus):valid + label .ness, .inpList > li input[type=number]:focus + label .ness, .inpList > li input[type=email]:not(:focus):valid + label .ness, .inpList > li input[type=email]:focus + label .ness {
+        .inpList > li > input[type=text]:not(:focus):valid + label span, .inpList > li > input[type=text]:focus + label span, .inpList > li > input[type=text]:read-only + label span, .inpList > li input[type=password]:not(:focus):valid + label span, .inpList > li input[type=password]:focus + label span, .inpList > li input[type=password]:read-only + label span, .inpList > li input[type=tel]:not(:focus):valid + label span, .inpList > li input[type=tel]:focus + label span, .inpList > li input[type=tel]:read-only + label span, .inpList > li input[type=number]:not(:focus):valid + label span, .inpList > li input[type=number]:focus + label span, .inpList > li input[type=number]:read-only + label span, .inpList > li input[type=email]:not(:focus):valid + label span, .inpList > li input[type=email]:focus + label span, .inpList > li input[type=email]:read-only + label span {
+          display: none; }
+        .inpList > li > input[type=text]:-moz-read-only + label .ness, .inpList > li input[type=password]:-moz-read-only + label .ness, .inpList > li input[type=tel]:-moz-read-only + label .ness, .inpList > li input[type=number]:-moz-read-only + label .ness, .inpList > li input[type=email]:-moz-read-only + label .ness {
           top: 2px; }
-      .inpList > li > input[type=text]:not(:focus):valid ~ .icDel, .inpList > li > input[type=text]:focus ~ .icDel, .inpList > li input[type=password]:not(:focus):valid ~ .icDel, .inpList > li input[type=password]:focus ~ .icDel, .inpList > li input[type=tel]:not(:focus):valid ~ .icDel, .inpList > li input[type=tel]:focus ~ .icDel, .inpList > li input[type=number]:not(:focus):valid ~ .icDel, .inpList > li input[type=number]:focus ~ .icDel, .inpList > li input[type=email]:not(:focus):valid ~ .icDel, .inpList > li input[type=email]:focus ~ .icDel {
+        .inpList > li > input[type=text]:not(:focus):valid + label .ness, .inpList > li > input[type=text]:focus + label .ness, .inpList > li > input[type=text]:read-only + label .ness, .inpList > li input[type=password]:not(:focus):valid + label .ness, .inpList > li input[type=password]:focus + label .ness, .inpList > li input[type=password]:read-only + label .ness, .inpList > li input[type=tel]:not(:focus):valid + label .ness, .inpList > li input[type=tel]:focus + label .ness, .inpList > li input[type=tel]:read-only + label .ness, .inpList > li input[type=number]:not(:focus):valid + label .ness, .inpList > li input[type=number]:focus + label .ness, .inpList > li input[type=number]:read-only + label .ness, .inpList > li input[type=email]:not(:focus):valid + label .ness, .inpList > li input[type=email]:focus + label .ness, .inpList > li input[type=email]:read-only + label .ness {
+          top: 2px; }
+      .inpList > li > input[type=text]:-moz-read-only ~ .icDel, .inpList > li input[type=password]:-moz-read-only ~ .icDel, .inpList > li input[type=tel]:-moz-read-only ~ .icDel, .inpList > li input[type=number]:-moz-read-only ~ .icDel, .inpList > li input[type=email]:-moz-read-only ~ .icDel {
+        display: block; }
+      .inpList > li > input[type=text]:not(:focus):valid ~ .icDel, .inpList > li > input[type=text]:focus ~ .icDel, .inpList > li > input[type=text]:read-only ~ .icDel, .inpList > li input[type=password]:not(:focus):valid ~ .icDel, .inpList > li input[type=password]:focus ~ .icDel, .inpList > li input[type=password]:read-only ~ .icDel, .inpList > li input[type=tel]:not(:focus):valid ~ .icDel, .inpList > li input[type=tel]:focus ~ .icDel, .inpList > li input[type=tel]:read-only ~ .icDel, .inpList > li input[type=number]:not(:focus):valid ~ .icDel, .inpList > li input[type=number]:focus ~ .icDel, .inpList > li input[type=number]:read-only ~ .icDel, .inpList > li input[type=email]:not(:focus):valid ~ .icDel, .inpList > li input[type=email]:focus ~ .icDel, .inpList > li input[type=email]:read-only ~ .icDel {
         display: block; }
   .inpList > li .icDel {
     display: none;
@@ -942,6 +956,78 @@ textarea::placeholder {
         background: #3324240F; }
     .laySelectbox .selectInner .selectList > li:first-child a {
       border-top: 0; }
+
+.accordian {
+  margin: 0 -23px; }
+  .accordian > li {
+    margin-top: 4px; }
+    .accordian > li:first-child {
+      margin-top: 0; }
+    .accordian > li .btAcct {
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      height: auto;
+      display: block;
+      position: relative;
+      padding: 17px 23px 12px;
+      color: #000;
+      font-size: 1.3rem;
+      font-weight: 500;
+      background: #fff; }
+      .accordian > li .btAcct:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        margin-top: -7.5px;
+        margin-left: -7.5px;
+        left: auto;
+        right: 23px;
+        margin-left: 0;
+        background: url(/images/common/ico_acctOff.svg) no-repeat 0 0/cover; }
+    .accordian > li .acctCont {
+      display: none;
+      position: relative;
+      padding: 16px 23px 20px;
+      background: #fff; }
+      .accordian > li .acctCont:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 23px;
+        right: 23px;
+        height: 3px;
+        background: #F6F6F4; }
+    .accordian > li.acctON .btAcct {
+      color: #2CA8EC; }
+      .accordian > li.acctON .btAcct:after {
+        background-image: url(/images/common/ico_acctOn.svg); }
+    .accordian > li.acctON .acctCont {
+      display: block; }
+
+.listType01 > li {
+  position: relative;
+  margin-top: 2px;
+  padding: 0 0 0 20px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.3rem; }
+  .listType01 > li:first-child {
+    margin-top: 0; }
+  .listType01 > li:before {
+    content: '-';
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.boxWhite {
+  background: #fff; }
 
 /* skipmenu */
 .skip a {
@@ -1770,7 +1856,7 @@ nav {
 
 .CompWrap {
   height: calc(100vh - 67px);
-  background: url(/images/img_comp01.jpg) no-repeat 50% 100%/100% auto; }
+  background: url(/images/img_comp01.png) no-repeat 50% 100%/100% auto; }
   .CompWrap .compInner {
     padding: 78px 23px 0 23px;
     text-align: center;
@@ -1791,6 +1877,8 @@ nav {
       font-size: 1.3rem; }
     .CompWrap .compInner .btnL {
       margin-top: 85px; }
+  .CompWrap.leaveComp {
+    background-image: url(/images/img_comp02.png); }
 
 .txtRegist {
   margin-top: 47px;
@@ -2032,6 +2120,81 @@ nav {
       .suppliesWrap .boxSupplies .list > li span {
         color: rgba(0, 0, 0, 0.6);
         font-size: 1.3rem; }
+
+.boxWhite.safeGuide {
+  min-height: calc(100vh - 129px);
+  padding: 32px 43px; }
+  .boxWhite.safeGuide h3 {
+    position: relative;
+    padding: 76px 0 0 0;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: url(/images/bg_safety.svg) no-repeat 100% 100%/214px auto; }
+    .boxWhite.safeGuide h3:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 58px;
+      left: 0;
+      width: 21px;
+      height: 4px;
+      background: #332424; }
+  .boxWhite.safeGuide .listType01 {
+    margin-top: 27px; }
+
+.noticeList > li {
+  margin-top: 5px;
+  background: #fff; }
+  .noticeList > li:first-child {
+    margin-top: 0; }
+  .noticeList > li > a {
+    display: block;
+    position: relative;
+    padding: 17px 23px 15px; }
+    .noticeList > li > a:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 5px;
+      height: 5px;
+      margin-top: -2.5px;
+      margin-left: -2.5px;
+      left: auto;
+      right: 23px;
+      border: solid #000;
+      border-width: 1.5px 1.5px 0 0;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .noticeList > li > a strong {
+      display: block;
+      color: #000;
+      font-size: 1.3rem;
+      font-weight: 500; }
+    .noticeList > li > a .date {
+      display: block;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 1.2rem; }
+
+.noticeView .titArea {
+  padding: 0 23px; }
+  .noticeView .titArea strong {
+    display: block;
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 500; }
+  .noticeView .titArea .date {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.2rem; }
+
+.noticeView .noticeCont {
+  margin-top: 15px;
+  padding: 0 23px; }
+  .noticeView .noticeCont .noticeTxt {
+    margin-top: 20px; }
 
 .sectionWrap .sectionNumlist {
   padding: 25px 23px;
@@ -2708,10 +2871,9 @@ nav {
     background-repeat: no-repeat;
     background-size: 100%; }
   .btnBlue.info::before {
-    width: 10px;
+    width: 11px;
     height: 10px;
-    background-color: #fff;
-    background-image: url(/images/ico_info.png); }
+    background-image: url(/images/ico_info.svg); }
   .btnBlue.location::before {
     width: 10px;
     height: 12px;
@@ -3293,14 +3455,15 @@ nav {
   background: rgba(0, 0, 0, 0.3); }
   .stampCoupon .inner {
     position: absolute;
-    top: 73px;
+    top: 80px;
     right: 25px;
     left: 25px;
-    min-height: calc(100% - 73px);
+    min-height: calc(100% - 87px);
     background: #fff;
     -webkit-box-shadow: 0px 3px 6px #00000029;
             box-shadow: 0px 3px 6px #00000029; }
     .stampCoupon .inner .top {
+      position: relative;
       padding: 50px 47px 14px;
       text-align: center; }
       .stampCoupon .inner .top .msg {
@@ -3341,6 +3504,18 @@ nav {
           opacity: 1; }
         .stampCoupon .inner .top .barcode.pass > * {
           opacity: .3; }
+      .stampCoupon .inner .top .stamp_benefitComp {
+        position: absolute;
+        top: 135px;
+        bottom: 0;
+        left: 47px;
+        right: 47px;
+        background: rgba(255, 255, 255, 0.3); }
+        .stampCoupon .inner .top .stamp_benefitComp img {
+          position: absolute;
+          bottom: 20px;
+          left: 5px;
+          right: 5px; }
     .stampCoupon .inner .bottom {
       padding: 20px 30px 54px;
       border-top: 2px dashed #D8D8D8; }
@@ -3350,6 +3525,26 @@ nav {
           font-weight: 500;
           font-size: 1.3rem;
           color: #000; }
+    .stampCoupon .inner:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -7px;
+      left: 0;
+      right: 0;
+      height: 7px;
+      padding: 0 5px;
+      background: url(/images/bg_round.png) round 0 0/24px; }
+    .stampCoupon .inner:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      right: 0;
+      height: 7px;
+      padding: 0 5px;
+      background: url(/images/bg_round2.png) round 0 0/24px; }
 
 .sightsCont {
   padding-top: 67px !important; }
@@ -3358,6 +3553,8 @@ nav {
     color: rgba(0, 0, 0, 0.6); }
   .sightsCont .photoWrap {
     margin-bottom: 12px; }
+    .sightsCont .photoWrap .photo {
+      height: 230px; }
     .sightsCont .photoWrap .buttonArea {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -3378,9 +3575,18 @@ nav {
           content: '';
           display: block;
           margin: 0 auto;
-          width: 25px;
-          height: 25px;
-          background: #000; }
+          width: 34px;
+          height: 26px;
+          background-repeat: no-repeat;
+          background-size: cover; }
+        .sightsCont .photoWrap .buttonArea > button.btZzim:before {
+          background-image: url(/images/ico_zzim.svg); }
+        .sightsCont .photoWrap .buttonArea > button.btShare:before {
+          background-image: url(/images/ico_share.svg); }
+        .sightsCont .photoWrap .buttonArea > button.btSearch:before {
+          background-image: url(/images/ico_search.svg); }
+        .sightsCont .photoWrap .buttonArea > button.btInquiry:before {
+          background-image: url(/images/ico_inquiry.svg); }
   .sightsCont h2:first-of-type {
     margin-bottom: 7px;
     font-weight: 700;

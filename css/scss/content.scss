@@ -130,7 +130,7 @@
 	100% {top:-100px}
   }
 
-.CompWrap{height:calc(100vh - 67px);background:url(#{$img_url}/img_comp01.jpg) no-repeat 50% 100% / 100% auto;
+.CompWrap{height:calc(100vh - 67px);background:url(#{$img_url}/img_comp01.png) no-repeat 50% 100% / 100% auto;
   	.compInner{padding:78px 23px 0 23px;text-align:center;background:url(#{$img_url}/img_comp02.jpg) no-repeat 0 calc(100% - 45px) / 100% auto;
   		.txt{display:block;padding-top:120px;color:$col_black;font-size:rem(20px);font-weight:$weight700;background:url(#{$img_url}/bg_comp.png) no-repeat 50% 0 / 81px auto;
   			em{color:$col_point1}
@@ -138,6 +138,7 @@
 		.date{display:block;margin-top:5px;color:$col_b60;font-size:rem(13px)}
 		.btnL{margin-top:85px}
 	}
+	&.leaveComp{background-image:url(#{$img_url}/img_comp02.png)}
 }
 
 //회원가입
@@ -235,6 +236,37 @@
 				span{color:$col_b60;font-size:rem(13px)}
 			}
 		}
+	}
+}
+
+//안전가이드
+.boxWhite{
+	&.safeGuide{min-height:calc(100vh - 129px);padding:32px 43px;
+		h3{position:relative;padding:76px 0 0 0;color:$col_black;font-size:rem(15px);font-weight:$weight700;background:url(#{$img_url}/bg_safety.svg) no-repeat 100% 100% / 214px auto;
+			&:before{content:'';display:block;position:absolute;top:58px;left:0;width:21px;height:4px;background:$col_g1200}
+		}
+		.listType01{margin-top:27px}
+	}
+}
+//공지/이벤트
+.noticeList{@extend %fullWidth;
+	> li{margin-top:5px;background:$col_white;
+		&:first-child{margin-top:0}
+		> a{display:block;position:relative;padding:17px 23px 15px;
+			&:after{@include pseudo(5px,5px);left:auto;right:23px;border:solid $col_black;border-width:1.5px 1.5px 0 0;@include prefix(transform,rotate(45deg));}
+			strong{display:block;color:$col_black;font-size:rem(13px);font-weight:$weight500}
+			.date{display:block;color:$col_b60;font-size:rem(12px)}
+		}
+	}
+}
+.noticeView{@extend %fullWidth;
+	.titArea{padding:0 23px;
+		strong{display:block;color:$col_black;font-size:rem(13px);font-weight:$weight500}
+		.date{display:block;color:$col_b60;font-size:rem(12px)}
+	}
+	.noticeCont{margin-top:15px;padding:0 23px;
+		figure{@extend %fullWidth;}
+		.noticeTxt{margin-top:20px}
 	}
 }
 
@@ -486,7 +518,7 @@
 .btDark{border:none;background:$col_g800;color:$col_white;}
 .btnBlue{display:inline-flex;align-items:center;padding:0 10px;height:26px;background:$col_point1;border-radius:999px;font-size:rem(10px);color:$col_white;line-height:26px;
 	&::before{content:'';margin-right:4px;width:12px;height:12px;background-position:0 0;background-repeat:no-repeat;background-size:100%;}
-	&.info::before{width:10px;height:10px;background-color:$col_white;background-image:url(#{$img_url}/ico_info.png);}
+	&.info::before{width:11px;height:10px;background-image:url(#{$img_url}/ico_info.svg);}
 	&.location::before{width:10px;height:12px;background-image:url(#{$img_url}/ico_location.png);}
 	&.modify::before{width:12px;height:12px;background-image:url(#{$img_url}/ico_modify.png);}
 	&.icNone:before{display:none}
@@ -679,13 +711,13 @@
 .stampCoupon{overflow:auto;position:fixed;top:0;left:0;z-index:100;width:100%;height:100%;background:rgba(0,0,0,.3);
 	.inner{
 		position:absolute;
-		top:73px;
+		top:80px;
 		right:25px;
 		left:25px;
-		min-height:calc(100% - 73px);
+		min-height:calc(100% - 87px);
 		background:$col_white;
 		box-shadow: 0px 3px 6px #00000029;
-		.top{padding:50px 47px 14px;text-align:center;
+		.top{position:relative;padding:50px 47px 14px;text-align:center;
 			.msg{font-size:rem(20px);color:$col_black;
 				span{display:block;margin-top:5px;font-size:rem(15px);line-height:20px;color:$col_point1;}
 			}
@@ -699,21 +731,31 @@
 					> *{opacity:.3;}
 				}
 			}
+			.stamp_benefitComp{position:absolute;top:135px;bottom:0;left:47px;right:47px;background:rgba($col_white, 0.3);
+				img{position:absolute;bottom:20px;left:5px;right:5px;}
+			}
 		}
 		.bottom{padding:20px 30px 54px;border-top:2px dashed $col_g300;
 			.listType{margin-bottom:10px;
 				> li{font-weight:$weight500;font-size:rem(13px);color:$col_black;}
 			}
 		}
+		&:before{content:'';display:block;position:absolute;top:-7px;left:0;right:0;height:7px;padding:0 5px;background:url(#{$img_url}/bg_round.png) round 0 0/24px;}
+		&:after{content:'';display:block;position:absolute;bottom:-7px;left:0;right:0;height:7px;padding:0 5px;background:url(#{$img_url}/bg_round2.png) round 0 0/24px;}
 	}
 }
 
 .sightsCont{padding-top:67px !important;
 	> *, .listType > li{font-size:rem(13px);color:$col_b60;}
 	.photoWrap{@extend %fullWidth;margin-bottom:12px;
+		.photo{height:230px}
 		.buttonArea{display:flex;justify-content:space-between;align-items:center;padding:0 30px;height:58px;background:$col_white;
 			> button{font-size:10px;color:$col_black;
-				&::before{content:'';display:block;margin:0 auto;width:25px;height:25px;background:$col_black;}
+				&::before{content:'';display:block;margin:0 auto;width:34px;height:26px;background-repeat:no-repeat;background-size:cover}
+				&.btZzim:before{background-image:url(#{$img_url}/ico_zzim.svg)}
+				&.btShare:before{background-image:url(#{$img_url}/ico_share.svg)}
+				&.btSearch:before{background-image:url(#{$img_url}/ico_search.svg)}
+				&.btInquiry:before{background-image:url(#{$img_url}/ico_inquiry.svg)}
 			}
 		}
 	}

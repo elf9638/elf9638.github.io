@@ -229,7 +229,7 @@ textarea::placeholder{font-size:rem(14px)}
 		&:first-child{margin-top:0}
 		> label{position:absolute;top:0;left:0;display:block;width:100%;padding:0 13px;line-height:45px;color:$col_b60;font-size:rem(13px);transition:0.3s;box-sizing:border-box}
 		> input[type=text], input[type=password], input[type=tel], input[type=number], input[type=email]{transition:0.3s;
-			&:not(:focus):valid, &:focus{padding-top:12px;
+			&:not(:focus):valid, &:focus, &:read-only{padding-top:12px;
 				+ label{top:0;width:auto;color:$col_point1;font-size:rem(9px);line-height:27px;
 					span{display:none}
 					.ness{top:2px}
@@ -311,3 +311,31 @@ textarea::placeholder{font-size:rem(14px)}
 		}
 	}
 }
+
+//accordian
+.accordian{margin:0 -23px;
+	> li{margin-top:4px;
+		&:first-child{margin-top:0}
+		.btAcct{@include ellipsis(2, auto);display:block;position:relative;padding:17px 23px 12px;color:$col_black;font-size:rem(13px);font-weight:$weight500;background:$col_white;
+			&:after{@include pseudo(15px,15px);left:auto;right:23px;margin-left:0;background:url(#{$img_url}/common/ico_acctOff.svg) no-repeat 0 0 /cover}
+		}
+		.acctCont{display:none;position:relative;padding:16px 23px 20px;background:$col_white;
+			&:before{content:'';display:block;position:absolute;top:0;left:23px;right:23px;height:3px;background:$col_g100}
+		}
+		&.acctON{
+			.btAcct{color:$col_point1;
+				&:after{background-image:url(#{$img_url}/common/ico_acctOn.svg)}
+			}
+			.acctCont{display:block}
+		}
+	}
+}
+
+//bullets
+.listType01{
+	> li{position:relative;margin-top:2px;padding:0 0 0 20px;color:$col_b60;font-size:rem(13px);
+		&:first-child{margin-top:0}
+		&:before{content:'-';position:absolute;top:0;left:0;}
+	}
+}
+.boxWhite{@extend %fullWidth;background:$col_white}
