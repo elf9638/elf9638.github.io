@@ -22,8 +22,60 @@
 	
 		<div id="container" class="container">
 			<!-- start of contents -->
+			<div class="sectionTop">
+				<div class="swiper swiperSection">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+							<img src="../images/dummy/@img_gallery.jpg" alt="">
+						</li>
+						<li class="swiper-slide">
+							<img src="../images/dummy/@img_gallery.jpg" alt="">
+						</li>
+						<li class="swiper-slide">
+							<img src="../images/dummy/@img_gallery.jpg" alt="">
+						</li>
+						<li class="swiper-slide">
+							<img src="../images/dummy/@img_gallery.jpg" alt="">
+						</li>
+						<li class="swiper-slide">
+							<img src="../images/dummy/@img_gallery.jpg" alt="">
+						</li>
+					</ul>
+					<div class="swiper-pagination"></div>
+				</div>
+
+				<div class="sectionDetailInfo">
+					<h2 class="titSection">바우길 1구간</h2>
+					<span class="subTit">[대관령 국가숲길 인접 구간] 바우길 1구간 선자령 풍차길</span>
+					<ul class="infoList">
+						<li>시작점 : 안인해변</li>
+						<li>종료점 : 오독떼기전수관</li>
+					</ul>
+					<ul class="roadInfoDetail">
+						<li>
+							<span>거리</span>
+							<strong>17.5km</strong>
+						</li>
+						<li>
+							<span>소요시간</span>
+							<strong>6시간</strong>
+						</li>
+						<li>
+							<span>난이도</span>
+							<strong>보통</strong>
+						</li>
+					</ul>
+					<div class="sectionIntro">
+						<h3 class="titSection">소개</h3>
+						<span class="btTog"><input type="checkbox" id="togSample01"><label for="togSample01">오디오 안내</label></span>
+						<p class="txtSection">
+							야트막한 고원에서 푸르게 펼쳐져 있는 양떼목장 울타리와 멀리서 바라보면 산 위에 흰 바람개비처럼 펼쳐져 있는 우리나라 최대의 풍력단지를 따라 백두대간의 등길을 밟고 걷는 길입니다. 정상은 해발 1157미터이지만 출발점의 높이가 850미터쯤 되는 곳이어서 걸을 때 그다지 오르막이 심하지 않습니다. 백두대간 등줄기에서 영동과 영서지방을 한눈에 바라볼 수 있으며, 봄부터 가을까지 야생화의 천국을 이루는 길입니다.
+						</p>
+					</div>
+				</div>
+			</div>
 			<div class="sectionWrap">
-				<h3 class="titDep-03">바우길(전체 17개)</h3>
+				<h3 class="titDep-03">(전체 17개)</h3>
 				<div class="sectionNumlist">
 					<div class="inner">
 						<a href="#section01" class="num01">1</a>
@@ -153,4 +205,19 @@
 	</section>
 	
 </body>
+
+<script src="../js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+	var swiper = new Swiper(".swiperSection", {
+		spaceBetween: 8,
+		pagination: {
+		el: ".swiper-pagination",
+		type: "fraction",
+		clickable: true,
+		},
+	});
+</script>
+
 </html>

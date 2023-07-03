@@ -293,6 +293,12 @@ textarea::placeholder {
   font-size: 1.5rem;
   font-weight: 700; }
 
+.titDep-05 {
+  margin: 0 0 10px 0;
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 700; }
+
 /* button */
 .btnDefault {
   overflow: hidden;
@@ -374,6 +380,7 @@ textarea::placeholder {
 
 /* swiper */
 .swiper {
+  position: relative;
   overflow: hidden;
   margin: 0 -23px;
   padding: 0 23px; }
@@ -407,6 +414,21 @@ textarea::placeholder {
       border-radius: 50%; }
       .swiper .swiper-pagination .swiper-pagination-bullet-active {
         background: #000873; }
+    .swiper .swiper-pagination.swiper-pagination-fraction {
+      position: absolute;
+      bottom: 20px;
+      right: 22px;
+      min-width: 55px;
+      height: 22px;
+      border-radius: 22px;
+      -webkit-backdrop-filter: blur(8px);
+              backdrop-filter: blur(8px);
+      color: #fff;
+      background: rgba(0, 0, 0, 0.4); }
+      .swiper .swiper-pagination.swiper-pagination-fraction > span {
+        display: inline-block;
+        color: #fff;
+        line-height: 22px; }
   .swiper.swiperRight {
     padding-right: 25px; }
   .swiper.swiperMain01 .swiper-slide a figure {
@@ -641,7 +663,7 @@ textarea::placeholder {
     display: block;
     position: relative;
     min-height: 26px;
-    padding: 2px 0 2px 26px;
+    padding: 3px 0 2px 26px;
     line-height: 1.3;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
@@ -1078,11 +1100,62 @@ body > #wrapper {
       display: inline-block;
       padding: 17px 20px; }
       #wrapper header .titMain a {
+        position: relative;
         display: inline-block;
         height: 33px; }
-        #wrapper header .titMain a img {
-          width: auto;
-          height: 33px; }
+        #wrapper header .titMain a .imgAni {
+          position: absolute;
+          top: 0;
+          left: 0;
+          -webkit-transition: 0.5s;
+          transition: 0.5s;
+          -webkit-animation-duration: 10s;
+                  animation-duration: 10s;
+          -webkit-animation-iteration-count: infinite;
+                  animation-iteration-count: infinite; }
+          #wrapper header .titMain a .imgAni img {
+            width: auto;
+            height: 33px; }
+          #wrapper header .titMain a .imgAni.ani01 {
+            opacity: 1;
+            -webkit-animation-name: ani001;
+                    animation-name: ani001; }
+          #wrapper header .titMain a .imgAni.ani02 {
+            opacity: 0;
+            -webkit-animation-name: ani02;
+                    animation-name: ani02; }
+
+@-webkit-keyframes ani001 {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes ani001 {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes ani02 {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes ani02 {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
     #wrapper header .topUtil {
       position: absolute;
       top: 15px;
@@ -1192,7 +1265,8 @@ nav {
     display: flex;
     width: 100%;
     height: 45px;
-    background: #fff; }
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.07); }
     nav > .inner > a {
       position: relative;
       width: 100%;
@@ -1249,48 +1323,49 @@ nav {
   .menuList .navList {
     overflow: auto;
     height: calc(100vh - 136px);
-    border-bottom: 1px solid rgba(216, 216, 216, 0.6);
     border-top: 1px solid rgba(216, 216, 216, 0.6); }
-    .menuList .navList ul > li {
-      border-top: 1px solid rgba(216, 216, 216, 0.6); }
-      .menuList .navList ul > li > a {
-        position: relative;
-        display: block;
-        height: 62px;
-        padding: 0 56px;
-        color: #000;
-        font-size: 1.5rem;
-        line-height: 61px; }
-        .menuList .navList ul > li > a:before {
-          content: '';
+    .menuList .navList ul {
+      border-bottom: 1px solid rgba(216, 216, 216, 0.6); }
+      .menuList .navList ul > li {
+        border-top: 1px solid rgba(216, 216, 216, 0.6); }
+        .menuList .navList ul > li > a {
+          position: relative;
           display: block;
-          position: absolute;
-          top: 50%;
-          left: 22px;
-          width: 31px;
-          height: 31px;
-          margin-top: -15px;
-          background: url(/images/common/spr_layout.svg) no-repeat 0 0/250px auto; }
-      .menuList .navList ul > li:first-child {
-        border-top: 0; }
-      .menuList .navList ul > li.gnb01 > a:before {
-        background-position: 0 -70px; }
-      .menuList .navList ul > li.gnb02 > a:before {
-        background-position: -32px -70px; }
-      .menuList .navList ul > li.gnb03 > a:before {
-        background-position: -64px -70px; }
-      .menuList .navList ul > li.gnb04 > a:before {
-        background-position: -96px -70px; }
-      .menuList .navList ul > li.gnb05 > a:before {
-        background-position: -128px -70px; }
-      .menuList .navList ul > li.gnb06 > a:before {
-        background-position: -160px -70px; }
-      .menuList .navList ul > li.gnb07 > a:before {
-        background-position: -192px -70px; }
-      .menuList .navList ul > li.gnb08 > a:before {
-        background-position: 0 -102px; }
-      .menuList .navList ul > li.gnb09 > a:before {
-        background-position: -32px -102px; }
+          height: 62px;
+          padding: 0 56px;
+          color: #000;
+          font-size: 1.5rem;
+          line-height: 61px; }
+          .menuList .navList ul > li > a:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 22px;
+            width: 31px;
+            height: 31px;
+            margin-top: -15px;
+            background: url(/images/common/spr_layout.svg) no-repeat 0 0/250px auto; }
+        .menuList .navList ul > li:first-child {
+          border-top: 0; }
+        .menuList .navList ul > li.gnb01 > a:before {
+          background-position: 0 -70px; }
+        .menuList .navList ul > li.gnb02 > a:before {
+          background-position: -32px -70px; }
+        .menuList .navList ul > li.gnb03 > a:before {
+          background-position: -64px -70px; }
+        .menuList .navList ul > li.gnb04 > a:before {
+          background-position: -96px -70px; }
+        .menuList .navList ul > li.gnb05 > a:before {
+          background-position: -128px -70px; }
+        .menuList .navList ul > li.gnb06 > a:before {
+          background-position: -160px -70px; }
+        .menuList .navList ul > li.gnb07 > a:before {
+          background-position: -192px -70px; }
+        .menuList .navList ul > li.gnb08 > a:before {
+          background-position: 0 -102px; }
+        .menuList .navList ul > li.gnb09 > a:before {
+          background-position: -32px -102px; }
   .menuList .navUtil {
     display: inline-block;
     max-width: 260px;
@@ -1425,7 +1500,7 @@ nav {
     top: 50%;
     left: 23px;
     right: 23px;
-    margin-top: 20px;
+    margin-top: 3px;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     background: #fff;
@@ -1480,7 +1555,14 @@ nav {
     margin-left: -7px; }
     .workingCalc .inner .selectWrap {
       width: 100%;
-      margin-left: 7px; }
+      margin-left: 7px;
+      height: 32px; }
+      .workingCalc .inner .selectWrap select {
+        border: none;
+        height: 32px;
+        line-height: 32px; }
+        .workingCalc .inner .selectWrap select:after {
+          margin-top: -12px; }
   .workingCalc button {
     width: 100%;
     height: 32px;
@@ -1535,10 +1617,11 @@ nav {
       .loginAfterArea .myInfoList > li .tit {
         position: absolute;
         top: 3px;
-        right: 0;
+        right: 4px;
         display: block;
         padding-right: 20px;
-        color: #008AD6; }
+        color: #008AD6;
+        line-height: 1.1; }
       .loginAfterArea .myInfoList > li strong {
         display: inline-block;
         padding-top: 3px;
@@ -1770,7 +1853,7 @@ nav {
       border: 1px solid #c8c8c8;
       border-radius: 5px;
       line-height: 43px;
-      background: url(/images/easy_login_g.png) no-repeat 20px 50%/32px auto; }
+      background: #fff url(/images/easy_login_g.png) no-repeat 20px 50%/32px auto; }
       .easyLogin > li > a:after {
         content: '';
         display: block;
@@ -1860,7 +1943,7 @@ nav {
   .CompWrap .compInner {
     padding: 78px 23px 0 23px;
     text-align: center;
-    background: url(/images/img_comp02.jpg) no-repeat 0 calc(100% - 45px)/100% auto; }
+    background: url(/images/img_comp02.png) no-repeat 0 calc(100% - 45px)/100% auto; }
     .CompWrap .compInner .txt {
       display: block;
       padding-top: 120px;
@@ -1963,7 +2046,7 @@ nav {
 
 .listUtil {
   position: relative;
-  margin-top: 25px; }
+  margin: 25px 0 10px; }
   .listUtil .listNum {
     padding-bottom: 12px;
     color: #000; }
@@ -2086,22 +2169,14 @@ nav {
   background: url(/images/img_supplies01.png) no-repeat 0 0/100% auto, url(/images/img_supplies02.png) no-repeat 0 100%/100% auto; }
   .suppliesWrap .boxSupplies {
     position: relative;
-    height: calc(100% - 120px);
+    height: calc(100vh - 260px);
+    min-height: 390;
     padding: 17px;
     border: 1px solid #D8D8D8;
     border-radius: 5px;
     background: #fff; }
-    .suppliesWrap .boxSupplies:after {
-      content: '';
-      display: block;
-      position: absolute;
-      bottom: -85px;
-      left: -24px;
-      right: -24px;
-      height: 221px;
-      background: url(/images/img_supplies03.png) no-repeat 0 100%/cover; }
     .suppliesWrap .boxSupplies figure {
-      padding: 44px 30px 32px; }
+      padding: 34px 30px 32px; }
     .suppliesWrap .boxSupplies .list > li {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2120,6 +2195,12 @@ nav {
       .suppliesWrap .boxSupplies .list > li span {
         color: rgba(0, 0, 0, 0.6);
         font-size: 1.3rem; }
+
+.imgSupplies {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 .boxWhite.safeGuide {
   min-height: calc(100vh - 129px);
@@ -2196,6 +2277,55 @@ nav {
   .noticeView .noticeCont .noticeTxt {
     margin-top: 20px; }
 
+.sectionTop {
+  margin-top: -30px; }
+  .sectionTop .swiperSection {
+    overflow: hidden;
+    padding: 0; }
+    .sectionTop .swiperSection .swiper-slide img {
+      -o-object-fit: cover;
+         object-fit: cover; }
+  .sectionTop ~ .sectionWrap {
+    margin-top: 25px; }
+
+.sectionDetailInfo {
+  margin: 22px 0 0 0; }
+  .sectionDetailInfo .titSection {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: 700; }
+  .sectionDetailInfo .subTit {
+    color: #2CA8EC;
+    font-size: 1.3rem; }
+  .sectionDetailInfo .infoList {
+    margin-top: 3px; }
+  .sectionDetailInfo .roadInfoDetail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 11px; }
+    .sectionDetailInfo .roadInfoDetail > li {
+      width: 100%;
+      height: 10px;
+      padding-left: 10px;
+      border-left: 2px solid #000; }
+      .sectionDetailInfo .roadInfoDetail > li span {
+        display: inline-block;
+        padding-right: 12px;
+        color: #000;
+        font-size: 1rem;
+        line-height: 10px;
+        vertical-align: top; }
+      .sectionDetailInfo .roadInfoDetail > li strong {
+        display: inline-block;
+        color: #2CA8EC;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 10px;
+        vertical-align: top; }
+
 .sectionWrap .sectionNumlist {
   padding: 25px 23px;
   background: #fff;
@@ -2252,6 +2382,54 @@ nav {
 
 .sectionPic {
   margin-top: -30px; }
+  .sectionPic ~ .sectionDetailInfo {
+    margin: 22px 0 0 0; }
+    .sectionPic ~ .sectionDetailInfo .titSection {
+      display: block;
+      margin-bottom: 10px;
+      color: #000;
+      font-size: 1.8rem;
+      font-weight: 700; }
+    .sectionPic ~ .sectionDetailInfo .subTit {
+      color: #2CA8EC;
+      font-size: 1.3rem; }
+    .sectionPic ~ .sectionDetailInfo .roadInfoDetail {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 10px; }
+      .sectionPic ~ .sectionDetailInfo .roadInfoDetail > li {
+        width: 100%;
+        padding-left: 15px;
+        border-left: 1px solid #000;
+        height: auto; }
+        .sectionPic ~ .sectionDetailInfo .roadInfoDetail > li span {
+          display: inline-block;
+          padding-right: 6px;
+          color: #000;
+          font-size: 1rem; }
+        .sectionPic ~ .sectionDetailInfo .roadInfoDetail > li strong {
+          display: block;
+          margin-top: 5px;
+          color: #2CA8EC;
+          font-size: 1.7rem;
+          font-weight: 700;
+          line-height: 1; }
+
+.faciList {
+  margin-top: 15px; }
+  .faciList > span {
+    display: inline-block;
+    height: 25px;
+    margin-left: 5px;
+    padding: 0 10px;
+    color: #000;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    line-height: 23px;
+    background: #fff; }
+    .faciList > span:first-child {
+      margin-left: 0; }
 
 .sectionIntro {
   margin-top: 33px;
@@ -2338,11 +2516,15 @@ nav {
   border-radius: 18px 18px 0 0;
   background: #fff;
   z-index: 10000; }
+  .popSectionInfo .btnLine {
+    margin: -60px 0 0 20px;
+    padding: 0 20px; }
   .popSectionInfo .layCont {
     padding: 20px 30px 40px 30px; }
   .popSectionInfo .tit {
     display: block;
     color: #000;
+    font-size: 1.4rem;
     font-weight: 700; }
   .popSectionInfo .myworkingList {
     margin-top: 10px;
@@ -2417,16 +2599,10 @@ nav {
         right: -6px;
         margin: 0;
         background: url(/images/ico_disPoint.svg) no-repeat 0 0/12px auto; }
-  .popSectionInfo .btMyLoca {
+  .popSectionInfo .btnBlue {
     position: absolute;
     top: 17px;
-    right: 20px;
-    height: 26px;
-    padding: 0 11px 0 17px;
-    line-height: 26px;
-    color: #fff;
-    border-radius: 26px;
-    background: #2CA8EC; }
+    right: 20px; }
 
 .txtAway {
   padding-top: 69px;
@@ -2957,6 +3133,14 @@ nav {
     width: 16px;
     height: 23px;
     background-image: url(/images/ico_start.png); }
+  .btnLine.stop {
+    border-color: #000; }
+    .btnLine.stop span {
+      color: #000; }
+    .btnLine.stop:before {
+      width: 16px;
+      height: 23px;
+      background-image: url(/images/ico_stop.png); }
 
 .btnLineGray {
   display: -webkit-inline-box;
@@ -3257,8 +3441,7 @@ nav {
 
 .stampCont {
   padding-top: 87px !important;
-  padding-bottom: 70% !important;
-  background: url(/images/bg_stamp_bottom.png) no-repeat 0 bottom/100% auto; }
+  padding-bottom: 70% !important; }
   .stampCont .titWrap {
     margin-top: 8px;
     height: 40px;
@@ -3326,6 +3509,12 @@ nav {
         margin-top: 8px; }
       .stampCont .stampBox > li > .stamp {
         margin: 0 auto; }
+  .stampCont figure {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%; }
 
 .stampTxt {
   font-size: 1.5rem;
@@ -3394,7 +3583,7 @@ nav {
         left: 0;
         z-index: -1;
         width: calc(100% + 26px);
-        height: 5px;
+        height: 6px;
         background: #fff; }
       .stampList .wrap > div:last-child::before {
         display: none; }
@@ -3430,7 +3619,7 @@ nav {
       top: 50%;
       width: 50%;
       height: calc(100% + 22px);
-      border: 5px solid #fff;
+      border: 6px solid #fff;
       border-bottom: none;
       border-radius: 999px; }
     .stampList .wrap:nth-child(odd)::before {
@@ -4068,3 +4257,7 @@ nav {
     font-weight: 700;
     line-height: 63px;
     background: #FF6D6D; }
+
+@media screen and (max-height: 760px) {
+  .imgSupplies {
+    display: none; } }
