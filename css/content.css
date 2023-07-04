@@ -1563,7 +1563,7 @@ nav {
         line-height: 32px; }
         .workingCalc .inner .selectWrap select:after {
           margin-top: -12px; }
-  .workingCalc button {
+  .workingCalc > button {
     width: 100%;
     height: 32px;
     margin-top: 13px;
@@ -1571,6 +1571,50 @@ nav {
     font-size: 1.3rem;
     border-radius: 5px;
     background: #C35252; }
+  .workingCalc.myWorking {
+    padding: 0; }
+    .workingCalc.myWorking .workingInner {
+      position: relative;
+      padding: 23px 18px; }
+      .workingCalc.myWorking .workingInner:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.1);
+        -webkit-backdrop-filter: blur(30px);
+                backdrop-filter: blur(30px); }
+      .workingCalc.myWorking .workingInner .box {
+        position: relative;
+        padding: 10px 15px;
+        border-radius: 10px;
+        background: #fff; }
+        .workingCalc.myWorking .workingInner .box .btnBlue {
+          position: absolute;
+          top: 50%;
+          margin-top: -13px; }
+          .workingCalc.myWorking .workingInner .box .btnBlue.location {
+            left: 18px; }
+          .workingCalc.myWorking .workingInner .box .btnBlue.stop {
+            right: 18px; }
+        .workingCalc.myWorking .workingInner .box .info {
+          padding: 0 65px;
+          text-align: center; }
+          .workingCalc.myWorking .workingInner .box .info .tit {
+            display: block;
+            font-size: 1rem;
+            font-weight: 500; }
+          .workingCalc.myWorking .workingInner .box .info strong {
+            display: block;
+            font-size: 1rem;
+            font-weight: 500; }
+        .workingCalc.myWorking .workingInner .box + .box {
+          margin-top: 2px; }
+          .workingCalc.myWorking .workingInner .box + .box .myworkingList {
+            margin-top: 0; }
 
 .loginBeforeArea {
   text-align: center; }
@@ -2526,51 +2570,6 @@ nav {
     color: #000;
     font-size: 1.4rem;
     font-weight: 700; }
-  .popSectionInfo .myworkingList {
-    margin-top: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: -15px; }
-    .popSectionInfo .myworkingList > li {
-      width: 100%;
-      padding-left: 15px; }
-      .popSectionInfo .myworkingList > li .tit {
-        color: #000;
-        font-size: 1rem;
-        font-weight: 400; }
-      .popSectionInfo .myworkingList > li .distanceInfo {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        position: relative;
-        margin: 8px 0 0 -15px; }
-        .popSectionInfo .myworkingList > li .distanceInfo:after {
-          content: '';
-          display: block;
-          position: absolute;
-          bottom: -2px;
-          left: 50%;
-          width: 1px;
-          height: 20px;
-          border-left: 1px solid #c8c8c8;
-          -webkit-transform: rotate(30deg);
-          transform: rotate(30deg); }
-        .popSectionInfo .myworkingList > li .distanceInfo > span {
-          width: 100%;
-          padding-left: 15px;
-          color: #2CA8EC;
-          font-size: 1rem;
-          font-weight: 700;
-          line-height: 1; }
-          .popSectionInfo .myworkingList > li .distanceInfo > span em {
-            font-size: 1.7rem; }
-          .popSectionInfo .myworkingList > li .distanceInfo > span.time {
-            margin-top: 14px; }
-      .popSectionInfo .myworkingList > li + li {
-        border-left: 1px solid #c8c8c8; }
-        .popSectionInfo .myworkingList > li + li .distanceInfo > span {
-          color: #000; }
   .popSectionInfo .lineDistance {
     position: absolute;
     bottom: 0;
@@ -2603,6 +2602,52 @@ nav {
     position: absolute;
     top: 17px;
     right: 20px; }
+
+.myworkingList {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -15px; }
+  .myworkingList > li {
+    width: 100%;
+    padding-left: 15px; }
+    .myworkingList > li .tit {
+      color: #000;
+      font-size: 1rem;
+      font-weight: 400; }
+    .myworkingList > li .distanceInfo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+      margin: 8px 0 0 -15px; }
+      .myworkingList > li .distanceInfo:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        width: 1px;
+        height: 20px;
+        border-left: 1px solid #c8c8c8;
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg); }
+      .myworkingList > li .distanceInfo > span {
+        width: 100%;
+        padding-left: 15px;
+        color: #2CA8EC;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1; }
+        .myworkingList > li .distanceInfo > span em {
+          font-size: 1.7rem; }
+        .myworkingList > li .distanceInfo > span.time {
+          margin-top: 14px; }
+    .myworkingList > li + li {
+      border-left: 1px solid #c8c8c8; }
+      .myworkingList > li + li .distanceInfo > span {
+        color: #000; }
 
 .txtAway {
   padding-top: 69px;
@@ -3058,6 +3103,12 @@ nav {
     width: 12px;
     height: 12px;
     background-image: url(/images/ico_modify.png); }
+  .btnBlue.stop {
+    background: #000; }
+    .btnBlue.stop::before {
+      width: 9px;
+      height: 15px;
+      background-image: url(/images/ico_stop2.svg); }
   .btnBlue.icNone:before {
     display: none; }
 
