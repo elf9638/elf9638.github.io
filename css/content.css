@@ -3412,10 +3412,22 @@ nav {
     display: -ms-flexbox;
     display: flex; }
     .searchList > li > a .photo {
+      position: relative;
       overflow: hidden;
       margin-right: 15px;
       width: 120px;
-      border-radius: 6px; }
+      height: 85px;
+      border-radius: 6px;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+      .searchList > li > a .photo img {
+        width: auto;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%); }
     .searchList > li > a dt {
       font-weight: 700;
       font-size: 1.3rem;
@@ -4312,3 +4324,16 @@ nav {
 @media screen and (max-height: 760px) {
   .imgSupplies {
     display: none; } }
+
+/* 20230717 관광지 목록 추가 */
+.signtList > li {
+  position: relative;
+  background: none; }
+  .signtList > li a dl dt .category {
+    color: #7D7D7D; }
+  .signtList > li a dl dd.desc {
+    color: #7D7D7D; }
+  .signtList > li .frmFavo {
+    position: absolute;
+    top: 18px;
+    right: 23px; }

@@ -686,7 +686,9 @@
 .searchList{@extend %fullWidth;
 	> li{padding:18px 23px;background:$col_white;
 		> a{display:flex;
-			.photo{overflow:hidden;margin-right:15px;width:120px;border-radius:6px;}
+			.photo{position:relative;overflow:hidden;margin-right:15px;width:120px;height:85px;border-radius:6px;flex-shrink:0;
+				img{width:auto;height:100%;position:absolute;top:0;left:50%;@include prefix(transform,translateX(-50%));}
+			}
 			dt{font-weight:$weight700;font-size:rem(13px);color:$col_black;
 				.category{display:block;margin-bottom:4px;font-size:rem(12px);color:$col_point1;}
 			}
@@ -998,4 +1000,17 @@
 
 @media screen and (max-height:760px) {
 	.imgSupplies{display:none}
-  }
+}
+
+/* 20230717 관광지 목록 추가 */
+.signtList > li{position:relative;background:none;
+	a{
+		dl{
+			dt{
+				.category{color:$col_g200}
+			}
+			dd.desc{color:$col_g200}
+		}
+	}
+	.frmFavo{position:absolute;top:18px;right:23px}
+}
