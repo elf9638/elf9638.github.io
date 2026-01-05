@@ -421,8 +421,7 @@ textarea::placeholder {
       min-width: 55px;
       height: 22px;
       border-radius: 22px;
-      -webkit-backdrop-filter: blur(8px);
-              backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
       color: #fff;
       background: rgba(0, 0, 0, 0.4); }
       .swiper .swiper-pagination.swiper-pagination-fraction > span {
@@ -1309,8 +1308,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    -webkit-backdrop-filter: blur(22px);
-            backdrop-filter: blur(22px);
+    backdrop-filter: blur(22px);
     z-index: 1;
     background: rgba(0, 0, 0, 0.15); }
   .menuList .inner {
@@ -1585,8 +1583,7 @@ nav {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.1);
-        -webkit-backdrop-filter: blur(30px);
-                backdrop-filter: blur(30px); }
+        backdrop-filter: blur(30px); }
       .workingCalc.myWorking .workingInner .box {
         position: relative;
         padding: 10px 15px;
@@ -2526,8 +2523,7 @@ nav {
   height: 38px;
   padding: 10px 20px;
   border-radius: 38px;
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   background: rgba(0, 0, 0, 0.2); }
   .startTime .tit {
     display: inline-block;
